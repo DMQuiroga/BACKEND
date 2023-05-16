@@ -13,6 +13,7 @@ const { authUser } = require('../middlewares/auth');
 const router = express.Router();
 
 // RUTAS PARA USUARIOS
+
 router.get('/activate/:registrationcode', activateUser);
 router.post('/user', createUser);
 router.get('/users/', authUser, getAllUsers);

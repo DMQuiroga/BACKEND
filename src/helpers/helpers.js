@@ -7,7 +7,7 @@ const generateError = (message, status) => {
   return error;
 };
 
-// CREO EL path si no existe para guardar la imgagen
+// CREO EL path si no existe para guardar la imagen
 const createPathIfNotExists = async (path) => {
   try {
     await fs.access(path);

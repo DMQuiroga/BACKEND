@@ -44,7 +44,7 @@ async function createUser(req, res, next) {
       [name, surname, email, password, registrationcode]
     );
     //ENVIO DE EMAIL DE CONFIRMACIÓN DE CREACIÓN DE USUARIO
-    const validationLink = `${process.env.DB_HOST}/activate/${registrationcode}`;
+    const validationLink = `${process.env.DB_HOST}:${process.env.PORT}/activate/${registrationcode}`;
 
     await sendMail({
       to: email,

@@ -1,7 +1,5 @@
 const getConnection = require('../../database/db');
 
-// OBTENER TODAS LAS NOTICIAS
-
 const getTodayNews = async (req, res, next) => {
   let connection;
 
