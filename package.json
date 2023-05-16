@@ -1,0 +1,38 @@
+{
+  "name": "proyectogrupob",
+  "version": "1.0.0",
+  "description": "Proyecto Grupo B - Hack A Boss",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DMQuiroga/Proyecto_grupo-B.git"
+  },
+  "author": "Grupo B",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DMQuiroga/Proyecto_grupo-B/issues"
+  },
+  "homepage": "https://github.com/DMQuiroga/Proyecto_grupo-B#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "jsonwebtoken": "^9.0.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.3.0",
+    "nanoid": "^4.0.2",
+    "sharp": "^0.32.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8"
+  }
+}
