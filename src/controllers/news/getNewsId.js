@@ -4,6 +4,8 @@
 const getConnection = require('../../database/db');
 
 const getNewsId = async (req, res, next) => {
+  const connect = await getConnection();
+
   try {
     const { id } = req.params;
     if (isNaN(id)) {
@@ -12,12 +14,11 @@ const getNewsId = async (req, res, next) => {
       });
     }
 
-    const connect = await getConnection();
     const [news] = await connect.query(
       `SELECT title, introText, text, imagenUrl, categoryId, publishDate  FROM news WHERE userId=?`,
       [id]
     );
-    connect.release();
+
     if (news.length) {
       return res.send(news);
     } else {
@@ -31,6 +32,8 @@ const getNewsId = async (req, res, next) => {
     return res.status(500).send({
       error: 'Error en el servidor',
     });
+  } finally {
+    connect.release();
   }
 };
 

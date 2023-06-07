@@ -4,12 +4,13 @@
 const getConnection = require('../../database/db');
 
 const getAllUsers = async (req, res, next) => {
+  const connect = await getConnection();
+
   try {
-    const connect = await getConnection();
     const [users] = await connect.query(
       `SELECT id, name, surname, imageUrl, biography, createdAt FROM users`
     );
-    connect.release();
+
     if (users.length) {
       return res.send(users);
     } else {
@@ -20,6 +21,8 @@ const getAllUsers = async (req, res, next) => {
     }
   } catch (error) {
     next(error);
+  } finally {
+    connect.release();
   }
 };
 

@@ -2,10 +2,11 @@
 // CREAR NUEVO USUARIO
 
 const getDB = require('../../database/db');
-
 const sendMail = require('../../helpers/sendGrid');
 
 async function createUser(req, res, next) {
+  let connect = null;
+
   try {
     const { name, surname, email, password } = req.body;
 
@@ -16,7 +17,7 @@ async function createUser(req, res, next) {
         mensaje: 'Error: La dirección de correo ' + email + ' es incorrecta.',
       });
 
-    const connect = await getDB();
+    connect = await getDB();
     if (!email || !password) {
       return res.status(400).send({
         status: 'bad',
@@ -35,37 +36,34 @@ async function createUser(req, res, next) {
       });
     }
 
-    //CREAR CÓDIGO DE REGISTRO PARA FUTURA ACTIVACIÓN
     const registrationcode = Math.floor(Math.random() * 1000000000000000000);
 
     await connect.query(
-      //SHA2 es un estandar de cifrado que recibe como parámetro la llave que se utilizara y el número de bits del HASH,
-      //de esta forma el valor será cifrado y se almacenará en la base de datos
-      //SHA --> Secure Hash Algorithm
       `INSERT INTO users (name, surname, email, password, registrationcode) VALUES (?,?,?,SHA2(?,512),?)`,
       [name, surname, email, password, registrationcode]
     );
-    //ENVIO DE EMAIL DE CONFIRMACIÓN DE CREACIÓN DE USUARIO
+
     const validationLink = `http://${process.env.API_HOST}:${process.env.PORT}/activate/${registrationcode}`;
 
     await sendMail({
       to: email,
       subject: 'Te acabas de registrar en HACKABOSS News',
       message: `
-            Muchas gracias por registrarte en Hack a Boss News,
-            pulsa el siguiente link para activar tu usuario:
+        Muchas gracias por registrarte en Hack a Boss News,
+        pulsa el siguiente link para activar tu usuario:
 
-            ${validationLink}
-          `,
+        ${validationLink}
+      `,
     });
 
-    connect.release();
     return res.status(200).send({
       status: 'ok',
       mensaje: 'Usuario creado correctamente',
     });
   } catch (error) {
     next(error);
+  } finally {
+    if (connect) connect.release();
   }
 }
 

@@ -46,6 +46,8 @@ const createNew = async (req, res, next) => {
 
       await createPathIfNotExists(uploadsDir);
 
+      // console.log(req.files.imageUrl);
+
       const imagenUrl = sharp(req.files.imageUrl.data);
       imagenUrl.resize(1000);
 
@@ -75,6 +77,8 @@ const createNew = async (req, res, next) => {
     });
   } catch (error) {
     next(error);
+  } finally {
+    if (connection) connection.release();
   }
 };
 

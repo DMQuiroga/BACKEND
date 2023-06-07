@@ -5,9 +5,9 @@ const getDB = require('../../database/db');
 const jwt = require('jsonwebtoken');
 
 const loginUser = async (req, res) => {
-  try {
-    const connect = await getDB();
+  const connect = await getDB();
 
+  try {
     const { email, password } = req.body;
 
     if (!email || !password) return res.status(400).send('Faltan datos');
@@ -54,10 +54,11 @@ const loginUser = async (req, res) => {
         user: info,
       },
     });
-    connect.release();
   } catch (error) {
     console.log(error);
     res.status(500).send(error.message);
+  } finally {
+    connect.release();
   }
 };
 

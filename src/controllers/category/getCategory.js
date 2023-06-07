@@ -4,14 +4,15 @@
 const getDB = require('../../database/db');
 
 const getCategory = async (req, res, next) => {
+  const connect = await getDB();
+
   try {
     const { id } = req.params;
-    const connect = await getDB();
     const [category] = await connect.query(
       `SELECT * FROM category WHERE id=?`,
       [id]
     );
-    connect.release();
+
     if (category.length) {
       return res.send({
         status: 'ok',
@@ -24,7 +25,8 @@ const getCategory = async (req, res, next) => {
     }
   } catch (error) {
     next(error);
+  } finally {
+    connect.release();
   }
 };
-
 module.exports = getCategory;

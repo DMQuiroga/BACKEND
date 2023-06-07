@@ -4,6 +4,8 @@
 const getConnection = require('../../database/db');
 
 const getUser = async (req, res, next) => {
+  const connect = await getConnection();
+
   try {
     const { id } = req.params;
     if (isNaN(id)) {
@@ -12,12 +14,11 @@ const getUser = async (req, res, next) => {
       });
     }
 
-    const connect = await getConnection();
     const [users] = await connect.query(
       `SELECT id, name, surname, email, imageUrl, biography, createdAt  FROM users WHERE id=?`,
       [id]
     );
-    connect.release();
+
     if (users.length) {
       return res.send(users[0]);
     } else {
@@ -27,6 +28,8 @@ const getUser = async (req, res, next) => {
     }
   } catch (error) {
     next(error);
+  } finally {
+    connect.release();
   }
 };
 
