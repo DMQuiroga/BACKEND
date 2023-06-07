@@ -11,6 +11,7 @@ const {
   getTodayNews,
   voteLike,
   voteDislike,
+  editNews,
 } = require('../controllers/news');
 
 const router = express.Router();
@@ -23,6 +24,7 @@ router.get('/today-news', getTodayNews);
 router.get('/today-news/:categoryId', getTodayNews);
 router.delete('/news/:id', authUser, deleteNew);
 router.post('/news', authUser, createNew);
+router.post('/edit', authUser, editNews);
 router.post('/news/:id/like', authUser, voteLike);
 router.post('/news/:id/dislike', authUser, voteDislike);
 

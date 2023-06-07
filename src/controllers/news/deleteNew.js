@@ -21,7 +21,7 @@ async function deleteNew(req, res, next) {
       [id, req.userId]
     );
 
-    console.log(result);
+    // console.log(result);
 
     if (result.affectedRows !== 1) {
       return res.status(400).send({

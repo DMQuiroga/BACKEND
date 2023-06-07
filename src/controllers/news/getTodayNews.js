@@ -1,3 +1,7 @@
+'use strict';
+// 1- OBTENER NOTICIAS DE HOY POR ID CATEGORIA ORDENADAS POR PUNTACIÓN
+// 2- OBTENER NOTICIAS DE HOY ORDENADAS POR PUNTUACIÓN
+
 const getConnection = require('../../database/db');
 
 const getTodayNews = async (req, res, next) => {

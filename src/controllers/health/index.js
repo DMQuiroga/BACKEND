@@ -1,5 +1,5 @@
 'use strict';
-// EXPORT
+// EXPORT healthCheck
 
 const healthCheck = require('./healthCheck');
 

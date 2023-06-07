@@ -1,3 +1,6 @@
+'use strict';
+// LOGIN USUARIO
+
 const getDB = require('../../database/db');
 const jwt = require('jsonwebtoken');
 
@@ -12,7 +15,7 @@ const loginUser = async (req, res) => {
     //comprobar que exista el usuario
     const [user] = await connect.query(
       `
-            SELECT id, isAdmin, active
+            SELECT id, isAdmin, email, active
             FROM users
             WHERE email = ? AND password = SHA2(?, 512)
             `,
@@ -23,14 +26,17 @@ const loginUser = async (req, res) => {
       return res.status(401).send('Email o password incorrectos');
 
     if (user[0].active !== 1) {
-      throw new Error(
-        'El usuario no está activado, revisa la bandeja de entrada de tu email para activar tu usuario'
-      );
+      return res
+        .status(401)
+        .send(
+          'El usuario no está activado, revisa la bandeja de entrada de tu email para activar tu usuario'
+        );
     }
 
     //jsonwebtoken
     const info = {
       id: user[0].id,
+      email: user[0].email,
       isAdmin: user[0].isAdmin,
     };
 
@@ -40,17 +46,18 @@ const loginUser = async (req, res) => {
     const token = jwt.sign(info, process.env.SECRET, { expiresIn: '1d' });
 
     //se lo envío al usuario
-    res.status(400).send({
+    res.status(200).send({
       status: 'ok',
       message: 'Login',
       data: {
-        token,
+        token: token,
+        user: info,
       },
     });
     connect.release();
   } catch (error) {
     console.log(error);
-    res.status(400).send(error);
+    res.status(500).send(error.message);
   }
 };
 

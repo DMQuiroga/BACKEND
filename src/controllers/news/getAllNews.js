@@ -1,6 +1,7 @@
-const getConnection = require('../../database/db');
-
+'use strict';
 // OBTENER TODAS LAS NOTICIAS
+
+const getConnection = require('../../database/db');
 
 const getAllNews = async (req, res, next) => {
   let connection;

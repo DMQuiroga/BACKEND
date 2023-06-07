@@ -1,6 +1,7 @@
-const getConnection = require('../../database/db');
+'use strict';
+// VOTAR NOTICIA POSITIVAMENTE O NEGATICAMENTE
 
-// VOTAR NOTICIA
+const getConnection = require('../../database/db');
 
 const voteLike = async (req, res, next) => {
   let connection;

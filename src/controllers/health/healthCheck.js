@@ -1,5 +1,5 @@
 'use strict';
-//I'M ALIVE
+// RESPONDE: I'M ALIVE
 
 const healthCheck = async (req, res) => {
   res.send({

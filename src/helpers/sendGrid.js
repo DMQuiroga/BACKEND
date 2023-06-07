@@ -1,3 +1,6 @@
+'use strict';
+// VALIDACIÓN POR EMAIL
+
 const sendgrid = require('@sendgrid/mail');
 
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
@@ -11,7 +14,7 @@ async function sendMail({ to, subject, message }) {
       text: message,
     };
 
-    console.log('Enviando email de activación a', to);
+    // console.log('Enviando email de activación a', to);
     await sendgrid.send(msg);
   } catch (error) {
     console.error(error);

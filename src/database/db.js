@@ -11,9 +11,9 @@ let pool;
 const getConnection = async function getDB() {
   //Si no existe pool, creo pool y lo conecto a connectionLimit, host, DB_HOST, user, password, database, timezone
   if (!pool) {
-    console.log(
-      `Creando conexión DB host:${DB_HOST} user:${DB_USER} schema:${DB_DATABASE}`
-    );
+    // console.log(
+    //   `Creando conexión DB host:${DB_HOST} user:${DB_USER} schema:${DB_DATABASE}`
+    // );
     pool = mysql.createPool({
       connectionLimit: 10,
       host: DB_HOST,

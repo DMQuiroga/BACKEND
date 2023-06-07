@@ -1,5 +1,5 @@
 'use strict';
-// EXPORTS
+// EXPORT
 
 const getNewsId = require('./getNewsId.js');
 const { createNew } = require('./createNew.js');
@@ -7,6 +7,7 @@ const deleteNew = require('./deleteNew.js');
 const getAllNews = require('./getAllNews.js');
 const getTodayNews = require('./getTodayNews.js');
 const { voteLike, voteDislike } = require('./voteNew.js');
+const { editNews } = require('./editNews.js');
 
 module.exports = {
   getNewsId,
@@ -16,4 +17,5 @@ module.exports = {
   getTodayNews,
   voteLike,
   voteDislike,
+  editNews,
 };

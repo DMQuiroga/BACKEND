@@ -1,4 +1,6 @@
 'use strict';
+// CREAR NUEVA NOTICIA
+
 const getConnection = require('../../database/db');
 
 const {
@@ -8,10 +10,6 @@ const {
 
 const path = require('path');
 const sharp = require('sharp');
-
-// CREAR NOTICIA
-
-// CREAR NUEVA NOTICIA
 
 const createNew = async (req, res, next) => {
   let connection;
@@ -48,12 +46,10 @@ const createNew = async (req, res, next) => {
 
       await createPathIfNotExists(uploadsDir);
 
-      console.log(req.files.imageUrl);
-
       const imagenUrl = sharp(req.files.imageUrl.data);
       imagenUrl.resize(1000);
 
-      photoFileName = `${Date.now()}_${req.files.imageUrl.name}.jpg`;
+      photoFileName = `${Date.now()}_${req.files.imageUrl.name}`;
       await imagenUrl.toFile(path.join(uploadsDir, photoFileName));
     }
 
@@ -75,7 +71,7 @@ const createNew = async (req, res, next) => {
 
     res.send({
       status: 'ok',
-      message: `Usted con su id: ${req.userId} acaba de crear una noticia la cual ha sido creada correctamente`,
+      message: `Usted con su id: ${req.userId} acaba de crear una noticia correctamente`,
     });
   } catch (error) {
     next(error);

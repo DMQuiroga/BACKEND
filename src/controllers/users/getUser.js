@@ -1,5 +1,5 @@
 'use strict';
-// OBTENER TODOS LOS USUARIO
+// OBTENER USUARIO POR ID
 
 const getConnection = require('../../database/db');
 
@@ -14,7 +14,7 @@ const getUser = async (req, res, next) => {
 
     const connect = await getConnection();
     const [users] = await connect.query(
-      `SELECT name, surname, email, imageUrl, biography, createdAt  FROM users WHERE id=?`,
+      `SELECT id, name, surname, email, imageUrl, biography, createdAt  FROM users WHERE id=?`,
       [id]
     );
     connect.release();

@@ -1,3 +1,5 @@
+'use strict';
+
 const express = require('express');
 
 const {
@@ -6,6 +8,7 @@ const {
   activateUser,
   loginUser,
   getAllUsers,
+  logoutUser,
 } = require('../controllers/users');
 
 const { authUser } = require('../middlewares/auth');
@@ -19,5 +22,6 @@ router.post('/user', createUser);
 router.get('/users/', authUser, getAllUsers);
 router.get('/user/:id', authUser, getUser);
 router.post('/login', loginUser);
+router.post('/logout', authUser, logoutUser);
 
 module.exports = router;

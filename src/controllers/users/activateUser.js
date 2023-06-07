@@ -1,3 +1,6 @@
+'use strict';
+// ACTIVACIÓN DE USUARIO
+
 const getDB = require('../../database/db');
 
 async function activateUser(req, res, next) {
@@ -43,7 +46,14 @@ async function activateUser(req, res, next) {
     }
     res.send({
       status: 'ok',
-      message: 'El usuario fue activado correctamente',
+      message: `Hola ${user[0].name} ${user[0].surname}, Gracias por activar tu cuenta en HBnews`,
+      data: {
+        id: user[0].id,
+        name: user[0].name,
+        surname: user[0].surname,
+        email: user[0].email,
+        createAt: user[0].createAt,
+      },
     });
   } catch (error) {
     next(error);

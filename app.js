@@ -31,11 +31,11 @@ app.use(express.json());
 
 // Ruta controlador health
 app.use(healthRouter);
-// Ruta controladores usuars
+// Ruta controladores users
 app.use(userRouter);
-//  Ruta controlador news
+//  Ruta controladores news
 app.use(newRouter);
-// Ruta controlador category
+// Ruta controladores category
 app.use(categoryRouter);
 
 //MIDDLEWARE DE GESTION DE ERRORES
@@ -60,5 +60,3 @@ app.use(function (req, res) {
 
 // Lanzamos el servidor
 app.listen(PORT, () => console.log(`Servidor escuchando en puerto ${PORT}`));
-
-// console.log(`${PORT}`);

@@ -1,3 +1,6 @@
+'use strict';
+// CREAR NUEVO USUARIO
+
 const getDB = require('../../database/db');
 
 const sendMail = require('../../helpers/sendGrid');
@@ -6,8 +9,7 @@ async function createUser(req, res, next) {
   try {
     const { name, surname, email, password } = req.body;
 
-    let expr =
-      /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    let expr = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/;
     if (!expr.test(email))
       return res.status(400).send({
         status: 'bad',
@@ -44,7 +46,7 @@ async function createUser(req, res, next) {
       [name, surname, email, password, registrationcode]
     );
     //ENVIO DE EMAIL DE CONFIRMACIÓN DE CREACIÓN DE USUARIO
-    const validationLink = `${process.env.DB_HOST}:${process.env.PORT}/activate/${registrationcode}`;
+    const validationLink = `http://${process.env.API_HOST}:${process.env.PORT}/activate/${registrationcode}`;
 
     await sendMail({
       to: email,

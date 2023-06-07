@@ -1,7 +1,7 @@
+'use strict';
+
 const express = require('express');
-
 const { getCategory, getAllCategories } = require('../controllers/category/');
-
 const router = express.Router();
 
 // RUTAS PARA CATEGORIAS

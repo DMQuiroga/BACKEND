@@ -1,18 +1,21 @@
 'use strict';
+// OBTENER TODAS LAS CATEGORIAS
 
 const getDB = require('../../database/db');
 
 const getAllCategories = async (req, res, next) => {
+  const connect = await getDB();
+
   try {
-    const connect = await getDB();
     const [categories] = await connect.query(`SELECT * FROM category`);
-    connect.release();
     return res.send({
       status: 'ok',
       data: categories,
     });
   } catch (error) {
     next(error);
+  } finally {
+    connect.release();
   }
 };
 

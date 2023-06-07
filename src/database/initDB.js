@@ -1,5 +1,5 @@
 'use strict';
-// CREAR hb_news
+// CREAR DATABASE hb_news
 
 // 1ª En SQL= CREATE DATABASE IF NOT EXISTS hb_news;
 // 2º Ejecutar= node src/database/initDB.js
