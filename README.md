@@ -24,8 +24,8 @@
 - **POST** - [/news/:id/like] - Votar una noticia positivamente. **CON TOKEN** -------|#DONE|
 - **POST** - [/news/:id/dislike] - Votar una noticia negativamente. **CON TOKEN** ----|#DONE|
 
-- **POST** - [/logout] - Cerrar sesión. **CON TOKEN** --------------------------------|XXXXX|
-- **PUT** - [/news/:id] - Editar una noticia validando id usuario. **CON TOKEN**------|XXXXX|
+- **POST** - [/logout] - Cerrar sesión. **CON TOKEN** --------------------------------|#DONE|
+- **PUT** - [/news/:id] - Editar una noticia validando id usuario. **CON TOKEN**------|#DONE|
 - **PUT** - [/users/:id] - Actualizar información usuario **CON TOKEN** --------------|XXXXX|
 
 # POSIBLES MEJORAS

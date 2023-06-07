@@ -1,0 +1,541 @@
+{
+	"info": {
+		"_postman_id": "a0d5375a-8ee1-404d-b629-5b08665a50d0",
+		"name": "HB news",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"David\",\n\"surname\": \"Martínez Quiroga\",\n\"email\": \"davidmartinezq@hotmail.com\",\n\"password\": \"123\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activate User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/activate/756694234896150500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"activate",
+								"756694234896150500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"email\": \"davidmartinezq@hotmail.com\",\n\"password\": \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5ODg5MiwiZXhwIjoxNjg2MTg1MjkyfQ.DM4TRUOAAZpERPbiNeq296kVyeL8Me4VremBYRhFor8",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5ODg5MiwiZXhwIjoxNjg2MTg1MjkyfQ.DM4TRUOAAZpERPbiNeq296kVyeL8Me4VremBYRhFor8",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5ODg5MiwiZXhwIjoxNjg2MTg1MjkyfQ.DM4TRUOAAZpERPbiNeq296kVyeL8Me4VremBYRhFor8",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "News",
+			"item": [
+				{
+					"name": "Create new",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5ODg5MiwiZXhwIjoxNjg2MTg1MjkyfQ.DM4TRUOAAZpERPbiNeq296kVyeL8Me4VremBYRhFor8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Holafjhj",
+									"type": "default"
+								},
+								{
+									"key": "introText",
+									"value": "Holitahjfj",
+									"type": "default"
+								},
+								{
+									"key": "text",
+									"value": "lalalalajhfhghj",
+									"type": "default"
+								},
+								{
+									"key": "categoryId",
+									"value": "2",
+									"type": "default"
+								},
+								{
+									"key": "imageUrl",
+									"type": "file",
+									"src": "/home/hacker/Downloads/prueba.jpg"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/news",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"news"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit new",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5ODg5MiwiZXhwIjoxNjg2MTg1MjkyfQ.DM4TRUOAAZpERPbiNeq296kVyeL8Me4VremBYRhFor8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "categoryId",
+									"value": "2",
+									"type": "default"
+								},
+								{
+									"key": "title",
+									"value": "Hola soy David1111",
+									"type": "default"
+								},
+								{
+									"key": "introText",
+									"value": "Hola soy introtexte",
+									"type": "default"
+								},
+								{
+									"key": "text",
+									"value": "Hola soy texte",
+									"type": "default"
+								},
+								{
+									"key": "imageUrl",
+									"type": "file",
+									"src": "/home/hacker/Pictures/Wallpapers/IMG_20230201_214640301.jpg"
+								},
+								{
+									"key": "newsId",
+									"value": "5",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get New By id User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5ODg5MiwiZXhwIjoxNjg2MTg1MjkyfQ.DM4TRUOAAZpERPbiNeq296kVyeL8Me4VremBYRhFor8",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/news/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"news",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All News",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5ODg5MiwiZXhwIjoxNjg2MTg1MjkyfQ.DM4TRUOAAZpERPbiNeq296kVyeL8Me4VremBYRhFor8",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/news",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"news"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete New By Id User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5ODg5MiwiZXhwIjoxNjg2MTg1MjkyfQ.DM4TRUOAAZpERPbiNeq296kVyeL8Me4VremBYRhFor8",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/news/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"news",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Today News By Id Category Order By Score",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/today-news/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"today-news",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Today News Order By Score",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/today-news",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"today-news"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LIKE New",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5ODg5MiwiZXhwIjoxNjg2MTg1MjkyfQ.DM4TRUOAAZpERPbiNeq296kVyeL8Me4VremBYRhFor8",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/news/1/like",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"news",
+								"1",
+								"like"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DISLIKE New",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5NDA5OSwiZXhwIjoxNjg2MTgwNDk5fQ.ap4t8lzKgnNrIqKjerdk0cNbk2vVT7NJO5OJFe3PyGc",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/news/1/dislike",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"news",
+								"1",
+								"dislike"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Categoria por Id categoria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/category/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Health",
+			"item": [
+				{
+					"name": "Health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/health",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
