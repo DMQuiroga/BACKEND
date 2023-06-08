@@ -73,7 +73,15 @@ const createNew = async (req, res, next) => {
 
     res.send({
       status: 'ok',
-      message: `Usted con su id: ${req.userId} acaba de crear una noticia correctamente`,
+      message: `Usted con su id:${req.userId} acaba de crear una noticia correctamente`,
+      data: {
+        userId: req.userId,
+        categoryId: categoryId,
+        title: title,
+        introText: introText,
+        text: text,
+        photoFileName: photoFileName,
+      },
     });
   } catch (error) {
     next(error);
