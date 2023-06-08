@@ -25,15 +25,19 @@ async function deleteNew(req, res, next) {
 
     if (result.affectedRows !== 1) {
       return res.status(400).send({
-        status: 'bad',
-        message: `La noticia con id ${id} no pudo ser borrada`,
+        status: 'ko',
+        error: `Lamentablemente, no se pudo eliminar la noticia con identificación ${id}`,
       });
     }
 
     // devolvemos una respuesta
     res.send({
       status: 'ok',
-      message: `La noticia con id ${id} fue borrada`,
+      message: `Con satisfacción, le informo que la noticia con identificación ${id} ha sido eliminada exitosamente`,
+      data: {
+        userId: req.userId,
+        idNew: id,
+      },
     });
   } catch (error) {
     next(error);
