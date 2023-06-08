@@ -3,10 +3,7 @@
 
 const getConnection = require('../../database/db');
 
-const {
-  generateError,
-  createPathIfNotExists,
-} = require('../../helpers/helpers');
+const { createPathIfNotExists } = require('../../helpers/helpers');
 
 const path = require('path');
 const sharp = require('sharp');
@@ -18,28 +15,41 @@ const editNews = async (req, res, next) => {
     const { newsId, categoryId, title, introText, text } = req.body;
 
     if (!newsId) {
-      throw generateError('Introduzca el ID de la noticia a editar', 400);
+      return res.status(400).send({
+        status: 'ko',
+        error:
+          'Solicitamos que introduzca el identificador (ID) correspondiente a la noticia que se desea editar',
+      });
     }
+
     if (!title || title.length > 250) {
-      throw generateError(
-        'El título es obligatorio y debe ser menor de 250 caracteres',
-        400
-      );
+      return res.status(400).send({
+        status: 'ko',
+        error:
+          'Le recordamos que el título de la noticia es un campo obligatorio y debe tener una extensión máxima de 250 caracteres',
+      });
     }
+
     if (!introText || introText.length > 512) {
-      throw generateError(
-        'El texto de introducción de tu noticia es obligatorio y debe ser menor de 512 caracteres',
-        400
-      );
+      return res.status(400).send({
+        status: 'ko',
+        error:
+          'El texto introductorio de la noticia es obligatorio y debe tener menos de 512 caracteres.',
+      });
     }
+
     if (!text) {
-      throw generateError('Debes escribir un texto en la noticia', 400);
+      return res.status(400).send({
+        status: 'ko',
+        error: 'Se requiere agregar contenido textual a la noticia',
+      });
     }
+
     if (!categoryId) {
-      throw generateError(
-        'Es obligatorio asignar una categoría a tu noticia',
-        400
-      );
+      return res.status(400).send({
+        status: 'ko',
+        error: 'Es obligatorio atribuir una categoría a la noticia',
+      });
     }
 
     let photoFileName;
@@ -80,7 +90,15 @@ const editNews = async (req, res, next) => {
 
     res.send({
       status: 'ok',
-      message: `La noticia con ID ${newsId} ha sido editada correctamente`,
+      message: `La noticia con ID: ${newsId} ha sido editada correctamente`,
+      data: {
+        newsId: newsId,
+        categoryId: categoryId,
+        title: title,
+        introText: introText,
+        text: text,
+        photoFileName: photoFileName,
+      },
     });
   } catch (error) {
     next(error);
