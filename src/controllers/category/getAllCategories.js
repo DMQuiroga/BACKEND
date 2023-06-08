@@ -10,6 +10,7 @@ const getAllCategories = async (req, res, next) => {
     const [categories] = await connect.query(`SELECT * FROM category`);
     return res.send({
       status: 'ok',
+      message: `Has logrado obtener todas las categorías disponibles de manera exitosa`,
       data: categories,
     });
   } catch (error) {
