@@ -24,11 +24,11 @@ async function activateUser(req, res, next) {
       new Error('No se pudo comprobar coincidencias');
     }
 
-    //SI NO EXISTE, LANZO ERROR
     if (user.length < 1) {
-      throw new Error(
-        'no hay usuario pendiente de valicación con ese código de registro'
-      );
+      return res.status(404).send({
+        status: 'ko',
+        error: `No hay usuario pendiente de valicación con ese código de registro`,
+      });
     }
 
     //ACTIVAR USUARIO
@@ -44,7 +44,7 @@ async function activateUser(req, res, next) {
     } catch (error) {
       throw new Error('no se pudo activar el usuario');
     }
-    res.send({
+    res.status(200).send({
       status: 'ok',
       message: `Hola ${user[0].name} ${user[0].surname}, Gracias por activar tu cuenta en HBnews`,
       data: {
