@@ -24,7 +24,7 @@ const getCategory = async (req, res, next) => {
     );
     // Comprobar si se encontró la categoría
     if (category.length) {
-      return res.send({
+      return res.status(200).send({
         status: 'ok',
         message: `Has logrado obtener la categoría con id:${category[0].id} de manera exitosa`,
         data: category[0],

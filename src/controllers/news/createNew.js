@@ -77,7 +77,7 @@ const createNew = async (req, res, next) => {
       [photoFileName, categoryId, title, introText, text, req.userId]
     );
 
-    res.send({
+    res.status(200).send({
       status: 'ok',
       message: `Usted con su identificación de usuario ${req.userId}, ha creado exitosamente una nueva noticia`,
       data: {

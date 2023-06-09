@@ -26,10 +26,19 @@ const getTodayNews = async (req, res, next) => {
       `);
     }
 
-    res.send({
-      status: 'ok',
-      data: result,
-    });
+    if (result.length > 0) {
+      res.status(200).send({
+        status: 'ok',
+        message: 'Obtuviste satisfactoriamente las noticias',
+        data: result,
+      });
+    } else {
+      res.status(404).send({
+        status: 'ko',
+        message: 'No se encontraron noticias para hoy',
+        data: [],
+      });
+    }
   } catch (error) {
     next(error);
   } finally {

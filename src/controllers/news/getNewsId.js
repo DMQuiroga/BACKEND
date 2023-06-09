@@ -23,7 +23,7 @@ const getNewsId = async (req, res, next) => {
     );
     // Comprobar si se encontraron noticias para el usuario
     if (news.length) {
-      return res.send({
+      return res.status(200).send({
         status: 'ok',
         message: `Felicidades, Ha recibido todas las noticias publicadas del usuario con id:${id}`,
         data: news,

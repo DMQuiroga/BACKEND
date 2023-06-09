@@ -31,7 +31,7 @@ async function deleteNew(req, res, next) {
     }
 
     // Devolvemos una respuesta
-    res.send({
+    res.status(200).send({
       status: 'ok',
       message: `Con satisfacción, le informo que la noticia con identificación ${id} ha sido eliminada exitosamente`,
       data: {

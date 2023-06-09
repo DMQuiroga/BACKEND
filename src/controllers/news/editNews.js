@@ -91,7 +91,7 @@ const editNews = async (req, res, next) => {
       [photoFileName, categoryId, title, introText, text, newsId]
     );
 
-    res.send({
+    res.status(200).send({
       status: 'ok',
       message: `La noticia con ID ${newsId} ha sido editada exitosamente.`,
       data: {

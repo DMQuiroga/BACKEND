@@ -16,13 +16,13 @@ const getAllNews = async (req, res, next) => {
 
     // Verificamos si se encontraron noticias
     if (result.length > 0) {
-      return res.send({
+      return res.status(200).send({
         status: 'ok',
         message: 'Se han obtenido todas las noticias exitosamente',
         data: result,
       });
     } else {
-      return res.send({
+      return res.status(404).send({
         status: 'ko',
         error: 'No se encontraron noticias disponibles',
         data: [],
