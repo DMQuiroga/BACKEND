@@ -13,15 +13,15 @@ async function createUser(req, res, next) {
     let expr = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/;
     if (!expr.test(email))
       return res.status(400).send({
-        status: 'bad',
-        mensaje: 'Error: La dirección de correo ' + email + ' es incorrecta.',
+        status: 'ko',
+        error: 'Error: La dirección de correo ' + email + ' es incorrecta.',
       });
 
     connect = await getDB();
     if (!email || !password) {
       return res.status(400).send({
-        status: 'bad',
-        mensaje: 'Faltan datos obligatorios para crear el usuario',
+        status: 'ko',
+        error: 'Faltan datos obligatorios para crear el usuario',
       });
     }
 
@@ -31,8 +31,8 @@ async function createUser(req, res, next) {
     );
     if (userExist.length > 0) {
       return res.status(406).send({
-        status: 'bad',
-        mensaje: 'El usuario ya existe',
+        status: 'ko',
+        error: 'El usuario ya existe',
       });
     }
 
@@ -58,7 +58,7 @@ async function createUser(req, res, next) {
 
     return res.status(200).send({
       status: 'ok',
-      mensaje: 'Usuario creado correctamente',
+      menssaje: 'Usuario creado correctamente',
     });
   } catch (error) {
     next(error);
