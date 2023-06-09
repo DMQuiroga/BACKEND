@@ -24,7 +24,7 @@ const getUser = async (req, res, next) => {
     if (users.length) {
       res.status(200).send({
         status: 'ok',
-        message: `Usuario con id:${users[0].id} encontrado correctamente`,
+        message: `Usuario con id: ${users[0].id} encontrado correctamente`,
         data: users[0],
       });
     } else {
