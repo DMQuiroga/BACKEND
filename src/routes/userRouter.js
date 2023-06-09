@@ -5,6 +5,7 @@ const express = require('express');
 const {
   getUser,
   createUser,
+  updateUser,
   activateUser,
   loginUser,
   getAllUsers,
@@ -19,6 +20,7 @@ const router = express.Router();
 
 router.get('/activate/:registrationcode', activateUser);
 router.post('/user', createUser);
+router.put('/user', authUser, updateUser);
 router.get('/users/', authUser, getAllUsers);
 router.get('/user/:id', authUser, getUser);
 router.post('/login', loginUser);

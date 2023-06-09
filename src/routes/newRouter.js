@@ -24,7 +24,7 @@ router.get('/today-news', getTodayNews);
 router.get('/today-news/:categoryId', getTodayNews);
 router.delete('/news/:id', authUser, deleteNew);
 router.post('/news', authUser, createNew);
-router.post('/edit', authUser, editNews);
+router.put('/edit', authUser, editNews);
 router.post('/news/:id/like', authUser, voteLike);
 router.post('/news/:id/dislike', authUser, voteDislike);
 

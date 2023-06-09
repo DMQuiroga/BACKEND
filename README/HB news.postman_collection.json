@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "a0d5375a-8ee1-404d-b629-5b08665a50d0",
+		"_postman_id": "b65b7a61-747f-45c9-bd8f-f18fc4ff8637",
 		"name": "HB news",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -91,7 +91,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5ODg5MiwiZXhwIjoxNjg2MTg1MjkyfQ.DM4TRUOAAZpERPbiNeq296kVyeL8Me4VremBYRhFor8",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjM0MjAwNCwiZXhwIjoxNjg2NDI4NDA0fQ.wtqzHqkJThx8j1XK6XlKr8G3DxrouRNgOlXpIY-aRuc",
 								"type": "default"
 							}
 						],
@@ -117,7 +117,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5ODg5MiwiZXhwIjoxNjg2MTg1MjkyfQ.DM4TRUOAAZpERPbiNeq296kVyeL8Me4VremBYRhFor8",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjM0MjAwNCwiZXhwIjoxNjg2NDI4NDA0fQ.wtqzHqkJThx8j1XK6XlKr8G3DxrouRNgOlXpIY-aRuc",
 								"type": "default"
 							}
 						],
@@ -149,7 +149,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5ODg5MiwiZXhwIjoxNjg2MTg1MjkyfQ.DM4TRUOAAZpERPbiNeq296kVyeL8Me4VremBYRhFor8",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjM0MjAwNCwiZXhwIjoxNjg2NDI4NDA0fQ.wtqzHqkJThx8j1XK6XlKr8G3DxrouRNgOlXpIY-aRuc",
 								"type": "default"
 							}
 						],
@@ -179,7 +179,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5ODg5MiwiZXhwIjoxNjg2MTg1MjkyfQ.DM4TRUOAAZpERPbiNeq296kVyeL8Me4VremBYRhFor8",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjM0MjAwNCwiZXhwIjoxNjg2NDI4NDA0fQ.wtqzHqkJThx8j1XK6XlKr8G3DxrouRNgOlXpIY-aRuc",
 								"type": "default"
 							}
 						],
@@ -188,17 +188,17 @@
 							"formdata": [
 								{
 									"key": "title",
-									"value": "Holafjhj",
+									"value": "Hola soy un tittle...",
 									"type": "default"
 								},
 								{
 									"key": "introText",
-									"value": "Holitahjfj",
+									"value": "Hola soy un introText...",
 									"type": "default"
 								},
 								{
 									"key": "text",
-									"value": "lalalalajhfhghj",
+									"value": "David creando noticia en Hack a Boss news...",
 									"type": "default"
 								},
 								{
@@ -209,7 +209,7 @@
 								{
 									"key": "imageUrl",
 									"type": "file",
-									"src": "/home/hacker/Downloads/prueba.jpg"
+									"src": "/home/hacker/Pictures/Wallpapers/IMG_20230201_214640301.jpg"
 								}
 							],
 							"options": {
@@ -235,11 +235,11 @@
 				{
 					"name": "Edit new",
 					"request": {
-						"method": "POST",
+						"method": "PUT",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5ODg5MiwiZXhwIjoxNjg2MTg1MjkyfQ.DM4TRUOAAZpERPbiNeq296kVyeL8Me4VremBYRhFor8",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjM0MjAwNCwiZXhwIjoxNjg2NDI4NDA0fQ.wtqzHqkJThx8j1XK6XlKr8G3DxrouRNgOlXpIY-aRuc",
 								"type": "default"
 							}
 						],
@@ -253,23 +253,23 @@
 								},
 								{
 									"key": "title",
-									"value": "Hola soy David1111",
+									"value": "Editando tittle",
 									"type": "default"
 								},
 								{
 									"key": "introText",
-									"value": "Hola soy introtexte",
+									"value": "Editando introText",
 									"type": "default"
 								},
 								{
 									"key": "text",
-									"value": "Hola soy texte",
+									"value": "David modificando noticia en Hack a Boss news",
 									"type": "default"
 								},
 								{
 									"key": "imageUrl",
 									"type": "file",
-									"src": "/home/hacker/Pictures/Wallpapers/IMG_20230201_214640301.jpg"
+									"src": "/home/hacker/Downloads/prueba.jpg"
 								},
 								{
 									"key": "newsId",
@@ -304,7 +304,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5ODg5MiwiZXhwIjoxNjg2MTg1MjkyfQ.DM4TRUOAAZpERPbiNeq296kVyeL8Me4VremBYRhFor8",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjM0MjAwNCwiZXhwIjoxNjg2NDI4NDA0fQ.wtqzHqkJThx8j1XK6XlKr8G3DxrouRNgOlXpIY-aRuc",
 								"type": "default"
 							}
 						],
@@ -330,7 +330,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5ODg5MiwiZXhwIjoxNjg2MTg1MjkyfQ.DM4TRUOAAZpERPbiNeq296kVyeL8Me4VremBYRhFor8",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjM0MjAwNCwiZXhwIjoxNjg2NDI4NDA0fQ.wtqzHqkJThx8j1XK6XlKr8G3DxrouRNgOlXpIY-aRuc",
 								"type": "default"
 							}
 						],
@@ -355,7 +355,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5ODg5MiwiZXhwIjoxNjg2MTg1MjkyfQ.DM4TRUOAAZpERPbiNeq296kVyeL8Me4VremBYRhFor8",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjM0MjAwNCwiZXhwIjoxNjg2NDI4NDA0fQ.wtqzHqkJThx8j1XK6XlKr8G3DxrouRNgOlXpIY-aRuc",
 								"type": "default"
 							}
 						],
@@ -420,7 +420,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5ODg5MiwiZXhwIjoxNjg2MTg1MjkyfQ.DM4TRUOAAZpERPbiNeq296kVyeL8Me4VremBYRhFor8",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjM0MjAwNCwiZXhwIjoxNjg2NDI4NDA0fQ.wtqzHqkJThx8j1XK6XlKr8G3DxrouRNgOlXpIY-aRuc",
 								"type": "default"
 							}
 						],
@@ -447,7 +447,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjA5NDA5OSwiZXhwIjoxNjg2MTgwNDk5fQ.ap4t8lzKgnNrIqKjerdk0cNbk2vVT7NJO5OJFe3PyGc",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4NjM0MjAwNCwiZXhwIjoxNjg2NDI4NDA0fQ.wtqzHqkJThx8j1XK6XlKr8G3DxrouRNgOlXpIY-aRuc",
 								"type": "default"
 							}
 						],
