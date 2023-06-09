@@ -8,28 +8,37 @@ const getNewsId = async (req, res, next) => {
 
   try {
     const { id } = req.params;
+    // Verificar si el formato del ID es válido
     if (isNaN(id)) {
       return res.status(400).send({
-        error: 'Formato ID incorrecto',
+        status: 'ko',
+        error:
+          'Formato ID incorrecto. Lamentablemente, el valor proporcionado no es válido. Se requiere ingresar un número de identificación',
       });
     }
-
+    // Obtener la noticia correspondiente al ID de usuario
     const [news] = await connect.query(
       `SELECT title, introText, text, imagenUrl, categoryId, publishDate  FROM news WHERE userId=?`,
       [id]
     );
-
+    // Comprobar si se encontraron noticias para el usuario
     if (news.length) {
-      return res.send(news);
+      return res.send({
+        status: 'ok',
+        message: `Felicidades, Ha recibido todas las noticias publicadas del usuario con id:${id}`,
+        data: news,
+      });
     } else {
       res.status(404).send({
+        status: 'ko',
         error:
-          'El id de usuario no existe o este usuario no ha publicado noticias',
+          'Lamentablemente, el identificador de usuario proporcionado no existe o este usuario no ha realizado ninguna publicación de noticias hasta el momento',
       });
     }
   } catch (error) {
     console.log(error);
     return res.status(500).send({
+      status: 'ko',
       error: 'Error en el servidor',
     });
   } finally {
