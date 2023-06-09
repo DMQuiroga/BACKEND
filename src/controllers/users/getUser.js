@@ -10,7 +10,9 @@ const getUser = async (req, res, next) => {
     const { id } = req.params;
     if (isNaN(id)) {
       return res.status(400).send({
-        error: 'Formato ID incorrecto',
+        status: 'ko',
+        error:
+          'Lamentablemente, el valor proporcionado no es válido. Se requiere ingresar un número de identificación de usuario en lugar de texto',
       });
     }
 
@@ -20,9 +22,14 @@ const getUser = async (req, res, next) => {
     );
 
     if (users.length) {
-      return res.send(users[0]);
+      res.status(200).send({
+        status: 'ok',
+        message: `Usuario con id:${users[0].id} encontrado correctamente`,
+        data: users[0],
+      });
     } else {
       res.status(404).send({
+        status: 'ko',
         error: 'Usuario no encontrado',
       });
     }

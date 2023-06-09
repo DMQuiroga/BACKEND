@@ -12,7 +12,11 @@ const getAllUsers = async (req, res, next) => {
     );
 
     if (users.length) {
-      return res.send(users);
+      res.status(200).send({
+        status: 'ok',
+        message: `Éxito en la obtención de usuarios`,
+        data: users,
+      });
     } else {
       res.status(404).send({
         status: 'ko',
