@@ -7,16 +7,27 @@ const getAllNews = async (req, res, next) => {
   let connection;
 
   try {
+    // Establecemos una conexión a la base de datos
     connection = await getConnection();
-
+    // Obtenemos todas las noticias de la base de datos
     const [result] = await connection.query(`
         SELECT title, introText, text, imagenUrl, categoryId, publishDate FROM news ORDER BY publishDate DESC
       `);
 
-    res.send({
-      status: 'ok',
-      data: result,
-    });
+    // Verificamos si se encontraron noticias
+    if (result.length > 0) {
+      return res.send({
+        status: 'ok',
+        message: 'Se han obtenido todas las noticias exitosamente',
+        data: result,
+      });
+    } else {
+      return res.send({
+        status: 'ko',
+        error: 'No se encontraron noticias disponibles',
+        data: [],
+      });
+    }
   } catch (error) {
     next(error);
   } finally {
