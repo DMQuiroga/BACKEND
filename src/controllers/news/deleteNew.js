@@ -9,10 +9,10 @@ async function deleteNew(req, res, next) {
   try {
     connection = await getConnection();
 
-    //sacamos la id de la entrada que queremos borrar
+    // Obtenemos id de la entrada que queremos borrar
     const { id } = req.params;
 
-    // borramos la entrada
+    // Borramos la entrada
     let [result] = await connection.query(
       `
       DELETE FROM news
@@ -30,7 +30,7 @@ async function deleteNew(req, res, next) {
       });
     }
 
-    // devolvemos una respuesta
+    // Devolvemos una respuesta
     res.send({
       status: 'ok',
       message: `Con satisfacción, le informo que la noticia con identificación ${id} ha sido eliminada exitosamente`,

@@ -3,6 +3,7 @@
 
 const healthCheck = async (req, res, next) => {
   try {
+    // Enviar una respuesta indicando que el servidor está activo
     res.send({
       status: 'ok',
       message: "I'm alive!",

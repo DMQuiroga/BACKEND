@@ -13,42 +13,43 @@ const createNew = async (req, res, next) => {
 
   try {
     const { categoryId, title, introText, text } = req.body;
-
+    // Comprobar la validez y longitud del título
     if (!title || title > 250) {
       return res.status(400).send({
         status: 'ko',
         error:
-          'Le recordamos que el título de la noticia es un campo obligatorio y debe tener una extensión máxima de 250 caracteres',
+          '(tittle) Le recordamos que el título de la noticia es un campo obligatorio y debe tener una extensión máxima de 250 caracteres',
       });
     }
-
+    // Comprobar la validez y longitud del texto introductorio
     if (!introText || introText > 512) {
       return res.status(400).send({
         status: 'ko',
         error:
-          'El texto introductorio de la noticia es obligatorio y debe tener menos de 512 caracteres.',
+          '(introText) El texto introductorio de la noticia es obligatorio y debe tener menos de 512 caracteres.',
       });
     }
-
+    // Comprobar si se proporcionó contenido textual para la noticia
     if (!text) {
       return res.status(400).send({
         status: 'ko',
-        error: 'Se requiere agregar contenido textual a la noticia',
+        error: '(text) Se requiere agregar contenido textual a la noticia',
       });
     }
-
+    // Comprobar si se asignó una categoría a la noticia
     if (!categoryId) {
       return res.status(400).send({
         status: 'ko',
-        error: 'Es obligatorio atribuir una categoría a la noticia',
+        error:
+          '(categoryId) Es obligatorio atribuir una categoría a la noticia',
       });
     }
 
     let photoFileName;
-
+    // Procesamiento de la imagen de la noticia (si se proporcionó una)
     if (req.files && req.files.imageUrl) {
       const uploadsDir = path.join(global.__basedir, '/uploads');
-
+      // Crear el directorio de subida si no existe
       await createPathIfNotExists(uploadsDir);
 
       // console.log(req.files.imageUrl);
@@ -61,7 +62,7 @@ const createNew = async (req, res, next) => {
     }
 
     connection = await getConnection();
-
+    // Insertar una nueva noticia en la base de datos
     await connection.query(
       `
               INSERT INTO news (

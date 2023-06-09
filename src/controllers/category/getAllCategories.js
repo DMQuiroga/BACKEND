@@ -7,7 +7,9 @@ const getAllCategories = async (req, res, next) => {
   const connect = await getDB();
 
   try {
+    // Consultar todas las categorías en la base de datos
     const [categories] = await connect.query(`SELECT * FROM category`);
+    // Comprobar si se encontraron categorías
     if (categories.length > 0) {
       return res.send({
         status: 'ok',
