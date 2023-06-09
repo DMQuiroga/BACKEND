@@ -23,14 +23,17 @@ const loginUser = async (req, res) => {
     );
 
     if (user.length === 0)
-      return res.status(401).send('Email o password incorrectos');
+      return res.status(401).send({
+        status: 'ko',
+        error: `Lamentablemente, el email o password son incorrectos`,
+      });
 
     if (user[0].active !== 1) {
-      return res
-        .status(401)
-        .send(
-          'El usuario no está activado, revisa la bandeja de entrada de tu email para activar tu usuario'
-        );
+      return res.status(401).send({
+        status: 'ko',
+        error:
+          'El usuario no está activado, revisa la bandeja de entrada de tu email para activar tu usuario',
+      });
     }
 
     //jsonwebtoken

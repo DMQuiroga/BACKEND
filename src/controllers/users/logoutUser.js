@@ -4,24 +4,30 @@
 const jwt = require('jsonwebtoken');
 
 const logoutUser = (req, res, next) => {
-  const { generateError } = require('../../helpers/helpers');
-
   try {
     // Token de autorización del encabezado de la solicitud
     const { authorization } = req.headers;
 
     if (!authorization) {
-      throw generateError('Falta autorización', 401);
+      return res.status(401).send({
+        status: 'ko',
+        error: `Falta autorización`,
+      });
     }
-
     // Verificar token
     try {
       jwt.verify(authorization, process.env.SECRET);
     } catch {
-      throw generateError('Token incorrecto', 401);
+      return res.status(401).send({
+        status: 'ko',
+        error: `Token incorrecto`,
+      });
     }
 
-    res.json({ message: 'Sesión cerrada con éxito' });
+    res.json({
+      status: 'ok',
+      message: `Sesión cerrada con éxito`,
+    });
   } catch (error) {
     next(error);
   }
