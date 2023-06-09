@@ -25,7 +25,7 @@ const getNewsId = async (req, res, next) => {
     if (news.length) {
       return res.status(200).send({
         status: 'ok',
-        message: `Felicidades, Ha recibido todas las noticias publicadas del usuario con id:${id}`,
+        message: `Felicidades, Ha recibido todas las noticias publicadas por el usuario con id:${id}`,
         data: news,
       });
     } else {

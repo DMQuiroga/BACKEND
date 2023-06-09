@@ -46,7 +46,8 @@ async function activateUser(req, res, next) {
     }
     res.status(200).send({
       status: 'ok',
-      message: `Hola ${user[0].name} ${user[0].surname}, Gracias por activar tu cuenta en HBnews`,
+
+      message: `Hola ${user[0].name} ${user[0].surname}, Gracias por activar tu cuenta en Hack a Boss News`,
       data: {
         id: user[0].id,
         name: user[0].name,

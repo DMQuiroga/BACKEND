@@ -49,10 +49,34 @@ async function createUser(req, res, next) {
       to: email,
       subject: 'Te acabas de registrar en HACKABOSS News',
       message: `
-        Muchas gracias por registrarte en Hack a Boss News,
-        pulsa el siguiente link para activar tu usuario:
+      Estimado(a) usuario(a),
 
-        ${validationLink}
+      En nombre del equipo de Hack a Boss News, nos complace darte la más cálida bienvenida a nuestra plataforma.
+      Tu decisión de unirte a nuestra comunidad demuestra un genuino interés por el conocimiento y el crecimiento personal.
+      
+      Como portal dedicado a la difusión de noticias y perspectivas innovadoras, nos comprometemos a ofrecerte contenido de calidad, 
+      con el propósito de enriquecer tu experiencia y ampliar tus horizontes intelectuales.
+      
+      Te invitamos a completar tu registro seleccionando el enlace a continuación, el cual activará tu cuenta.
+      
+      ${validationLink}
+      
+      Nos emociona contar contigo como miembro de nuestra comunidad y estamos ansiosos por compartir contigo información valiosa, inspiradora y educativa.
+      A través de Hack a Boss News, podrás mantenerte al tanto de los últimos avances en diversas áreas de interés, así como participar en votaciones de noticias.
+      
+      No dudes en explorar todas las secciones y características que nuestra plataforma tiene para ofrecerte.
+      
+      Si tienes alguna duda sobre el funcionamiento de nuestra aplicación solo tienes que pedir un ticket en la plataforma de soporte: hackaboss.freshdesk.com/
+      Nuestro equipo de soporte formado por Stefano Peraldini, Bárbara Imbernón Fuentes y Berto estará encantado de ayudarte y a tu disponibildad total 24/7.
+      Si prefieres llamarlos por telefono también puedes y si es de noche mejor, que les gusta despertarse con una llamadita nocturna.
+      
+      Una vez más, te damos las gracias por unirte a Hack a Boss News. ¡Esperamos que tu experiencia aquí sea gratificante y enriquecedora!
+      
+      Atentamente,
+      
+      El equipo de Hack a Boss News
+
+      Solo sé que no sé nada pero allá vamos!!!
       `,
     });
 
