@@ -35,7 +35,7 @@ const getTodayNews = async (req, res, next) => {
     } else {
       res.status(404).send({
         status: 'ko',
-        message: 'No se encontraron noticias para hoy',
+        error: 'No se encontraron noticias para hoy',
         data: [],
       });
     }

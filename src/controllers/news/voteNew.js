@@ -20,8 +20,8 @@ const voteLike = async (req, res, next) => {
 
     if (!result.length) {
       return res.status(404).send({
-        status: 'bad',
-        data: 'La noticia no existe',
+        status: 'ko',
+        error: 'La noticia no existe',
       });
     }
 
@@ -33,9 +33,10 @@ const voteLike = async (req, res, next) => {
       [nuevoScore, id]
     );
 
-    res.send({
+    res.status(200).send({
       status: 'ok',
-      data: 'Like aplicado a la noticia, puntuación actual ' + nuevoScore,
+      message: 'Like aplicado a la noticia, puntuación actual ' + nuevoScore,
+      data: result[0].score + 1,
     });
   } catch (error) {
     next(error);
@@ -61,8 +62,8 @@ const voteDislike = async (req, res, next) => {
 
     if (!result.length) {
       return res.status(404).send({
-        status: 'bad',
-        data: 'La noticia no existe',
+        status: 'ko',
+        error: 'La noticia no existe',
       });
     }
 
@@ -74,9 +75,10 @@ const voteDislike = async (req, res, next) => {
       [nuevoScore, id]
     );
 
-    res.send({
+    res.status(200).send({
       status: 'ok',
-      data: 'Dislike aplicado a la noticia, puntuación actual ' + nuevoScore,
+      message: 'Dislike aplicado a la noticia, puntuación actual ' + nuevoScore,
+      data: result[0].score - 1,
     });
   } catch (error) {
     next(error);
