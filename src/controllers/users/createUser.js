@@ -83,6 +83,10 @@ async function createUser(req, res, next) {
     return res.status(200).send({
       status: 'ok',
       menssaje: 'Usuario creado correctamente',
+      data: {
+        name: name,
+        surname: surname,
+      },
     });
   } catch (error) {
     next(error);

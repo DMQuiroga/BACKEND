@@ -71,6 +71,10 @@ async function updateUser(req, res, next) {
     return res.status(200).send({
       status: 'ok',
       message: `Enhorabuena ${name} ${surname}, tus datos de perfil han sido actualizados exitosamente`,
+      data: {
+        updateName: name,
+        updateSurname: surname,
+      },
     });
   } catch (error) {
     next(error);
