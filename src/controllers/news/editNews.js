@@ -59,11 +59,13 @@ const editNews = async (req, res, next) => {
       // Crear el directorio de subida si no existe
       await createPathIfNotExists(uploadsDir);
 
-      const imageUrl = sharp(req.files.imageUrl.data);
-      imageUrl.resize(1000);
+      // console.log(req.files.imageUrl);
 
-      photoFileName = `${Date.now()}_${req.files.imageUrl.name}.jpg`;
-      await imageUrl.toFile(path.join(uploadsDir, photoFileName));
+      const imagenUrl = sharp(req.files.imageUrl.data);
+      imagenUrl.resize(1000);
+
+      photoFileName = `${Date.now()}_${req.files.imageUrl.name}`;
+      await imagenUrl.toFile(path.join(uploadsDir, photoFileName));
     }
 
     connection = await getConnection();
