@@ -8,9 +8,11 @@
 - **POST** - [/login] - Inicio de sesión. **CON TOKEN** ------------------------------|#DONE|
 - **GET** - [/news/:id] - Obtener las noticias de un usuario. **CON TOKEN** ----------|#DONE|
 - **GET** - [/today-news] - Listar noticias del día ordenadas por valoración ---------|#DONE|
-- **GET** - [/today-news/:categoryId] - Listar noticias del día filtradas por tema ordenadas por valoración ------|#DONE|
+- **GET** - [/today-news/:categoryId] - Noticias del día por tema ORDER BY score -----|#DONE|
 - **GET** - [/category/:id] - Obtener la categoria por id_categoria ------------------|#DONE|
 - **GET** - [/category] - Obtener todas las categorias -------------------------------|#DONE|
+- **GET** - [/best] - Obtener las 3 mejores noticias ---------------------------------|#DONE|
+- **GET** - [/worst] - Obtener las 3 peores noticias ---------------------------------|#DONE|
 
 ## Registrados
 

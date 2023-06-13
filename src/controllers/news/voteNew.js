@@ -3,6 +3,7 @@
 
 const getConnection = require('../../database/db');
 
+// VOTAR NOTICIA POSITIVAMENTE
 const voteLike = async (req, res, next) => {
   let connection;
 
@@ -45,6 +46,7 @@ const voteLike = async (req, res, next) => {
   }
 };
 
+// VOTAR NOTICIA NEGATICAMENTE
 const voteDislike = async (req, res, next) => {
   let connection;
 

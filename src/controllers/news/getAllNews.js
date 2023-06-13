@@ -11,7 +11,7 @@ const getAllNews = async (req, res, next) => {
     connection = await getConnection();
     // Obtenemos todas las noticias de la base de datos
     const [result] = await connection.query(`
-        SELECT title, introText, text, imagenUrl, categoryId, publishDate FROM news ORDER BY publishDate DESC
+        SELECT title, introText, text, imagenUrl, categoryId, score, publishDate FROM news ORDER BY publishDate DESC
       `);
 
     // Verificamos si se encontraron noticias

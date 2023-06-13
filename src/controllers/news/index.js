@@ -7,6 +7,7 @@ const deleteNew = require('./deleteNew.js');
 const getAllNews = require('./getAllNews.js');
 const getTodayNews = require('./getTodayNews.js');
 const { voteLike, voteDislike } = require('./voteNew.js');
+const { getBestNews, getWorstNews } = require('./getBestWorstNews.js');
 const { editNews } = require('./editNews.js');
 
 module.exports = {
@@ -17,5 +18,7 @@ module.exports = {
   getTodayNews,
   voteLike,
   voteDislike,
+  getBestNews,
+  getWorstNews,
   editNews,
 };

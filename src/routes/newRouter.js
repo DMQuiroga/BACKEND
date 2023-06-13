@@ -11,6 +11,8 @@ const {
   getTodayNews,
   voteLike,
   voteDislike,
+  getBestNews,
+  getWorstNews,
   editNews,
 } = require('../controllers/news');
 
@@ -22,6 +24,8 @@ router.get('/news/:id', authUser, getNewsId);
 router.get('/news', authUser, getAllNews);
 router.get('/today-news', getTodayNews);
 router.get('/today-news/:categoryId', getTodayNews);
+router.get('/best', getBestNews);
+router.get('/worst', getWorstNews);
 router.delete('/news/:id', authUser, deleteNew);
 router.post('/news', authUser, createNew);
 router.put('/edit', authUser, editNews);
