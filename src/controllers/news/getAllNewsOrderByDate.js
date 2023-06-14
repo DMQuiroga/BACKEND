@@ -3,7 +3,7 @@
 
 const getConnection = require('../../database/db');
 
-const getAllNews = async (req, res, next) => {
+const getAllNewsOrderByDate = async (req, res, next) => {
   let connection;
 
   try {
@@ -18,7 +18,8 @@ const getAllNews = async (req, res, next) => {
     if (result.length > 0) {
       return res.status(200).send({
         status: 'ok',
-        message: 'Se han obtenido todas las noticias exitosamente',
+        message:
+          'Se han obtenido todas las noticias ordenadas por fecha exitosamente',
         data: result,
       });
     } else {
@@ -35,4 +36,4 @@ const getAllNews = async (req, res, next) => {
   }
 };
 
-module.exports = getAllNews;
+module.exports = getAllNewsOrderByDate;
