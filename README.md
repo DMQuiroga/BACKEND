@@ -19,13 +19,13 @@
 - _Mismos endpoints anteriores_
 - **GET** - [/users] - Información de usuarios. **CON TOKEN** ------------------------|#DONE|
 - **GET** - [/user/:id] - Información de usuario. **CON TOKEN** ----------------------|#DONE|
-- **GET** - [/news] - Listar todas las noticias **CON TOKEN** ------------------------|#DONE|
+- **GET** - [/news] - Listar noticias ordenadas por fecha **CON TOKEN** --------------|#DONE|
+- **GET** - [/news] - Listar noticias ordenadas por score **CON TOKEN** --------------|#DONE|
 - **GET** - [/news/:id] - Obtener todas las noticias de un usuario **CON TOKEN** -----|#DONE|
 - **POST** - [/news] - Crear nueva noticia. **CON TOKEN** ----------------------------|#DONE|
 - **DELETE** - [/news/:id] - Eliminar noticia validando id usuario. **CON TOKEN** ----|#DONE|
 - **POST** - [/news/:id/like] - Votar una noticia positivamente. **CON TOKEN** -------|#DONE|
 - **POST** - [/news/:id/dislike] - Votar una noticia negativamente. **CON TOKEN** ----|#DONE|
-
 - **POST** - [/logout] - Cerrar sesión. **CON TOKEN** --------------------------------|#DONE|
 - **PUT** - [/news/:id] - Editar una noticia validando id usuario. **CON TOKEN**------|#DONE|
 - **PUT** - [/users/:id] - Actualizar información usuario **CON TOKEN** --------------|#DONE|

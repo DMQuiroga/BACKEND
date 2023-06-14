@@ -7,13 +7,14 @@ const {
   getNewsId,
   deleteNew,
   createNew,
-  getAllNews,
+  getAllNewsOrderByDate,
   getTodayNews,
   voteLike,
   voteDislike,
   getBestNews,
   getWorstNews,
   editNews,
+  getAllNewsOrderByScore,
 } = require('../controllers/news');
 
 const router = express.Router();
@@ -21,7 +22,8 @@ const router = express.Router();
 // RUTAS PARA NOTICIAS
 
 router.get('/news/:id', authUser, getNewsId);
-router.get('/news', authUser, getAllNews);
+router.get('/news', authUser, getAllNewsOrderByDate);
+router.get('/news-score', authUser, getAllNewsOrderByScore);
 router.get('/today-news', getTodayNews);
 router.get('/today-news/:categoryId', getTodayNews);
 router.get('/best', getBestNews);
