@@ -83,3 +83,14 @@ async function updateUser(req, res, next) {
 }
 
 module.exports = updateUser;
+
+/*
+{
+  "name": "Davicito",
+  "surname": "Castro",
+  "email": "davidmartinezq@hotmail.com",
+  "password": "123",
+  "biography": "Soy pintor",
+  "userId": 5
+}
+*/

@@ -358,7 +358,7 @@
 					"response": []
 				},
 				{
-					"name": "get All News Order By Score",
+					"name": "get All News Order By Date",
 					"request": {
 						"method": "GET",
 						"header": [

@@ -1,10 +1,10 @@
 USE hb_news;
-INSERT INTO users (name, surname, email, password, imagenUrl, biography) 
+INSERT INTO users (name, surname, email, password, imagenUrl, biography, active) 
 VALUES 
-('Eduardo', 'Castro Bianch', 'eduardo@gmail.com', '123', 'https://i.pinimg.com/170x/b9/9a/30/b99a309f679ff9154edc78d8db0575ea.jpg', 'Soy desarollador web'),
-('Guillermo', 'De La Rosa', 'guillermo@gmail.com', '123', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSDv22Pa8W1Tmf2uOYMLV-JuG1mMA6K8ezZg&usqp=CAU', 'Soy desarollador web'),
-('Fran', 'Valderrey', 'fran@gmail.com', '123', 'https://c.wallhere.com/photos/74/7a/V_for_Vendetta_mask_Guy_Fawkes_mask-76525.jpg!d', 'Soy desarollador web'),
-('David', 'Martinez Quiroga', 'david@gmail.com', '123', 'https://images.fineartamerica.com/images/artworkimages/medium/2/calimero-show-vesna-antic.jpg', 'Soy desarollador web');
+('Eduardo', 'Castro Bianch', 'eduardo@gmail.com', '123', 'https://i.pinimg.com/170x/b9/9a/30/b99a309f679ff9154edc78d8db0575ea.jpg', 'Soy desarollador web', true),
+('Guillermo', 'De La Rosa', 'guillermo@gmail.com', '123', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSDv22Pa8W1Tmf2uOYMLV-JuG1mMA6K8ezZg&usqp=CAU', 'Soy desarollador web', true),
+('Fran', 'Valderrey', 'fran@gmail.com', '123', 'https://c.wallhere.com/photos/74/7a/V_for_Vendetta_mask_Guy_Fawkes_mask-76525.jpg!d', 'Soy desarollador web', true),
+('David', 'Martinez Quiroga', 'david@gmail.com', '123', 'https://images.fineartamerica.com/images/artworkimages/medium/2/calimero-show-vesna-antic.jpg', 'Soy desarollador web', true);
 
 
 

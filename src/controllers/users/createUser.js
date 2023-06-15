@@ -98,3 +98,13 @@ async function createUser(req, res, next) {
 }
 
 module.exports = createUser;
+
+/*
+{
+  "name": "David",
+  "surname": "Martínez Quiroga",
+  "email": "davidmartinezq@hotmail.com",
+  "password": "123",
+  "biography": "Soy Desarrolador"
+  }
+*/
