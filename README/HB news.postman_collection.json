@@ -14,8 +14,39 @@
 						"method": "POST",
 						"header": [],
 						"body": {
-							"mode": "raw",
-							"raw": "",
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "David",
+									"type": "default"
+								},
+								{
+									"key": "surname",
+									"value": "Martínez Quiroga",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "davidmartinezq@hotmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "default"
+								},
+								{
+									"key": "biography",
+									"value": "Soy desarrollar",
+									"type": "default"
+								},
+								{
+									"key": "imageUrl",
+									"type": "file",
+									"src": "/home/hacker/Downloads/prueba.jpg"
+								}
+							],
 							"options": {
 								"raw": {
 									"language": "json"
@@ -214,7 +245,7 @@
 								{
 									"key": "imageUrl",
 									"type": "file",
-									"src": "/home/hacker/Downloads/images (1).jpeg"
+									"src": "/home/hacker/Downloads/images.jpeg"
 								}
 							],
 							"options": {
