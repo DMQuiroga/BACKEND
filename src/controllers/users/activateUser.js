@@ -36,7 +36,7 @@ async function activateUser(req, res, next) {
       await connection.query(
         `
               UPDATE users
-              SET active=1, registrationCode = NULL
+              SET active=true, registrationCode = NULL
               WHERE registrationCode = ?
               `,
         [registrationcode]
