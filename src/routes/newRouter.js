@@ -12,6 +12,7 @@ const {
   voteLike,
   voteDislike,
   voteFakeNew,
+  getFakeNews,
   getBestNews,
   getWorstNews,
   editNews,
@@ -29,6 +30,7 @@ router.get('/today-news', getTodayNews);
 router.get('/today-news/:categoryId', getTodayNews);
 router.get('/best', getBestNews);
 router.get('/worst', getWorstNews);
+router.get('/fake', getFakeNews);
 router.delete('/news/:id', authUser, deleteNew);
 router.post('/news', authUser, createNew);
 router.put('/edit', authUser, editNews);

@@ -8,6 +8,7 @@ const {
   getAllNewsOrderByDate,
   getAllNewsOrderByScore,
 } = require('./getAllNewsOrderBy.js');
+const getFakeNews = require('./getFakeNews.js');
 const getTodayNews = require('./getTodayNews.js');
 const { voteLike, voteDislike, voteFakeNew } = require('./voteNew.js');
 const { getBestNews, getWorstNews } = require('./getBestWorstNews.js');
@@ -18,6 +19,7 @@ module.exports = {
   createNew,
   deleteNew,
   getAllNewsOrderByDate,
+  getFakeNews,
   getTodayNews,
   voteLike,
   voteDislike,

@@ -13,6 +13,7 @@
 - **GET** - [/category] - Obtener todas las categorias -------------------------------|#DONE|
 - **GET** - [/best] - Obtener las 3 mejores noticias ---------------------------------|#DONE|
 - **GET** - [/worst] - Obtener las 3 peores noticias ---------------------------------|#DONE|
+- **GET** - [/fake] - Obtener las fake noticias ORDER BY score------------------------|#DONE|
 
 ## Registrados
 
