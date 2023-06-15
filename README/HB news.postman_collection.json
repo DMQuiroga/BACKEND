@@ -179,8 +179,44 @@
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "{\n        \"name\": \"Davicito\",\n        \"surname\": \"Castro\",\n        \"email\": \"davidmartinezq@hotmail.com\",\n        \"password\": \"123\",\n        \"biography\": \"Soy pintor\",\n        \"userId\": 5\n    }",
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Daviciño",
+									"type": "default"
+								},
+								{
+									"key": "surname",
+									"value": "Perillán Castro",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "davidmartinezq@hotmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "default"
+								},
+								{
+									"key": "biography",
+									"value": "Soy Pintor !",
+									"type": "default"
+								},
+								{
+									"key": "userId",
+									"value": "5",
+									"type": "default"
+								},
+								{
+									"key": "imageUrl",
+									"type": "file",
+									"src": "/home/hacker/Downloads/images (1).jpeg"
+								}
+							],
 							"options": {
 								"raw": {
 									"language": "json"

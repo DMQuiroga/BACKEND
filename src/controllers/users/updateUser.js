@@ -1,5 +1,10 @@
 const getDB = require('../../database/db');
 
+const { createPathIfNotExists } = require('../../helpers/helpers');
+
+const path = require('path');
+const sharp = require('sharp');
+
 async function updateUser(req, res, next) {
   let connect = null;
 
@@ -40,6 +45,22 @@ async function updateUser(req, res, next) {
       });
     }
 
+    let photoFileName;
+    // Procesamiento de la imagen de la noticia (si se proporcionó una)
+    if (req.files && req.files.imageUrl) {
+      const uploadsDir = path.join(global.__basedir, '/uploads');
+      // Crear el directorio de subida si no existe
+      await createPathIfNotExists(uploadsDir);
+
+      // console.log(req.files.imageUrl);
+
+      const imagenUrl = sharp(req.files.imageUrl.data);
+      imagenUrl.resize(1000);
+
+      photoFileName = `${Date.now()}_${req.files.imageUrl.name}`;
+      await imagenUrl.toFile(path.join(uploadsDir, photoFileName));
+    }
+
     // Verificar si el usuario existe antes de editarlo
     const [existingUser] = await connect.query(
       `SELECT id FROM users WHERE id = ?`,
@@ -58,10 +79,19 @@ async function updateUser(req, res, next) {
     await connect.query(
       `
       UPDATE users
-      SET name = ?, surname = ?, email = ?, password = SHA2(?, 512), biography = ?, lastUpdatedAt = ?
+      SET imagenUrl = ?, name = ?, surname = ?, email = ?, password = SHA2(?, 512), biography = ?, lastUpdatedAt = ?
       WHERE id = ?
       `,
-      [name, surname, email, password, biography, lastUpdatedAt, userId]
+      [
+        photoFileName,
+        name,
+        surname,
+        email,
+        password,
+        biography,
+        lastUpdatedAt,
+        userId,
+      ]
     );
 
     return res.status(200).send({
@@ -73,6 +103,7 @@ async function updateUser(req, res, next) {
         updateEmail: email,
         updateBiography: biography,
         lastUpdatedAt: lastUpdatedAt,
+        updateAvatarPhoto: photoFileName,
       },
     });
   } catch (error) {

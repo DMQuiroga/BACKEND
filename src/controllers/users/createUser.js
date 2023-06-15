@@ -117,7 +117,7 @@ async function createUser(req, res, next) {
         surname: surname,
         email: email,
         biography: biography,
-        photoFileName: photoFileName,
+        avatarPhoto: photoFileName,
       },
     });
   } catch (error) {
