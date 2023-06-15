@@ -17,6 +17,29 @@ async function updateUser(req, res, next) {
       });
     }
 
+    if (!name || name > 100) {
+      return res.status(400).send({
+        status: 'ko',
+        error:
+          '(name) Le recordamos que debe proporcionarnos su nombre y debe tener una extensión máxima de 100 caracteres',
+      });
+    }
+    // Comprobar la validez y longitud del texto introductorio
+    if (!surname || surname > 200) {
+      return res.status(400).send({
+        status: 'ko',
+        error:
+          '(surname) Le recordamos que debe proporcionarnos sus apellidos y debe tener una extensión máxima de 200 caracteres',
+      });
+    }
+    // Comprobar si se proporcionó contenido textual para la noticia
+    if (!email) {
+      return res.status(400).send({
+        status: 'ko',
+        error: '(email) Le recordamos que debe proporcionarnos su email',
+      });
+    }
+
     // Verificar si el usuario existe antes de editarlo
     const [existingUser] = await connect.query(
       `SELECT id FROM users WHERE id = ?`,
