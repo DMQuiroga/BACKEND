@@ -4,6 +4,11 @@
 const getDB = require('../../database/db');
 const sendMail = require('../../helpers/sendGrid');
 
+const { createPathIfNotExists } = require('../../helpers/helpers');
+
+const path = require('path');
+const sharp = require('sharp');
+
 async function createUser(req, res, next) {
   let connect = null;
 
@@ -25,6 +30,22 @@ async function createUser(req, res, next) {
       });
     }
 
+    let photoFileName;
+    // Procesamiento de la imagen de la noticia (si se proporcionó una)
+    if (req.files && req.files.imageUrl) {
+      const uploadsDir = path.join(global.__basedir, '/uploads');
+      // Crear el directorio de subida si no existe
+      await createPathIfNotExists(uploadsDir);
+
+      // console.log(req.files.imageUrl);
+
+      const imagenUrl = sharp(req.files.imageUrl.data);
+      imagenUrl.resize(1000);
+
+      photoFileName = `${Date.now()}_${req.files.imageUrl.name}`;
+      await imagenUrl.toFile(path.join(uploadsDir, photoFileName));
+    }
+
     const [userExist] = await connect.query(
       `SELECT id FROM users WHERE email=?`,
       [email]
@@ -39,8 +60,16 @@ async function createUser(req, res, next) {
     const registrationcode = Math.floor(Math.random() * 1000000000000000000);
 
     await connect.query(
-      `INSERT INTO users (name, surname, email, password, biography, registrationcode) VALUES (?,?,?,SHA2(?,512),?,?)`,
-      [name, surname, email, password, biography, registrationcode]
+      `INSERT INTO users (imagenUrl, name, surname, email, password, biography, registrationcode) VALUES (?,?,?,?,SHA2(?,512),?,?)`,
+      [
+        photoFileName,
+        name,
+        surname,
+        email,
+        password,
+        biography,
+        registrationcode,
+      ]
     );
 
     const validationLink = `http://${process.env.API_HOST}:${process.env.PORT}/activate/${registrationcode}`;
@@ -88,6 +117,7 @@ async function createUser(req, res, next) {
         surname: surname,
         email: email,
         biography: biography,
+        photoFileName: photoFileName,
       },
     });
   } catch (error) {
@@ -105,6 +135,6 @@ module.exports = createUser;
   "surname": "Martínez Quiroga",
   "email": "davidmartinezq@hotmail.com",
   "password": "123",
-  "biography": "Soy Desarrolador"
+  "biography": "Soy Desarrollador"
   }
 */
