@@ -53,13 +53,15 @@ async function updateUser(req, res, next) {
     }
 
     // Actualizar los datos del usuario en la base de datos
+    const lastUpdatedAt = new Date();
+
     await connect.query(
       `
       UPDATE users
-      SET name = ?, surname = ?, email = ?, password = SHA2(?, 512), biography = ?
+      SET name = ?, surname = ?, email = ?, password = SHA2(?, 512), biography = ?, lastUpdatedAt = ?
       WHERE id = ?
       `,
-      [name, surname, email, password, biography, userId]
+      [name, surname, email, password, biography, lastUpdatedAt, userId]
     );
 
     return res.status(200).send({
@@ -70,6 +72,7 @@ async function updateUser(req, res, next) {
         updateSurname: surname,
         updateEmail: email,
         updateBiography: biography,
+        lastUpdatedAt: lastUpdatedAt,
       },
     });
   } catch (error) {

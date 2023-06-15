@@ -17,7 +17,7 @@ const getUser = async (req, res, next) => {
     }
 
     const [users] = await connect.query(
-      `SELECT id, name, surname, email, imagenUrl, biography, createdAt  FROM users WHERE id=?`,
+      `SELECT id, name, surname, email, imagenUrl, biography, createdAt, lastUpdatedAt  FROM users WHERE id=?`,
       [id]
     );
 
