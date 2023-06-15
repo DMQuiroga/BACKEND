@@ -6,6 +6,7 @@ const router = express.Router();
 
 // RUTA PARA I'M ALIVE
 
+// Responde "I'm alive"
 router.get('/health', healthCheck);
 
 module.exports = router;

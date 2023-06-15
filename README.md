@@ -7,13 +7,14 @@
 - **GET** - [/activate/Código_validación_email] - Activación de usuario. -------------|#DONE|
 - **POST** - [/login] - Inicio de sesión. **CON TOKEN** ------------------------------|#DONE|
 - **GET** - [/news/:id] - Obtener las noticias de un usuario. **CON TOKEN** ----------|#DONE|
+- **GET** - [/news-score] - Obtener las noticias ORDER BY SCORE ----------------------|#DONE|
 - **GET** - [/today-news] - Listar noticias del día ordenadas por valoración ---------|#DONE|
 - **GET** - [/today-news/:categoryId] - Noticias del día por tema ORDER BY score -----|#DONE|
 - **GET** - [/category/:id] - Obtener la categoria por id_categoria ------------------|#DONE|
 - **GET** - [/category] - Obtener todas las categorias -------------------------------|#DONE|
 - **GET** - [/best] - Obtener las 3 mejores noticias ---------------------------------|#DONE|
 - **GET** - [/worst] - Obtener las 3 peores noticias ---------------------------------|#DONE|
-- **GET** - [/fake] - Obtener las fake noticias ORDER BY score------------------------|#DONE|
+- **GET** - [/fake] - Obtener las fake noticias ORDER BY score -----------------------|#DONE|
 
 ## Registrados
 
@@ -23,14 +24,14 @@
 - **GET** - [/news] - Listar noticias ordenadas por fecha **CON TOKEN** --------------|#DONE|
 - **GET** - [/news] - Listar noticias ordenadas por score **CON TOKEN** --------------|#DONE|
 - **GET** - [/news/:id] - Obtener todas las noticias de un usuario **CON TOKEN** -----|#DONE|
-- **POST** - [/news] - Crear nueva noticia. **CON TOKEN** ----------------------------|#DONE|
 - **DELETE** - [/news/:id] - Eliminar noticia validando id usuario. **CON TOKEN** ----|#DONE|
+- **POST** - [/news] - Crear nueva noticia. **CON TOKEN** ----------------------------|#DONE|
 - **POST** - [/news/:id/like] - Votar una noticia positivamente. **CON TOKEN** -------|#DONE|
 - **POST** - [/news/:id/dislike] - Votar una noticia negativamente. **CON TOKEN** ----|#DONE|
-- - **POST** - [/news/:id/fake] - Votar una noticia fake. **CON TOKEN** --------------|#DONE|
+- **POST** - [/news/:id/fake] - Votar una noticia fake. **CON TOKEN** --------------|#DONE|
 - **POST** - [/logout] - Cerrar sesión. **CON TOKEN** --------------------------------|#DONE|
 - **PUT** - [/news/:id] - Editar una noticia validando id usuario. **CON TOKEN**------|#DONE|
-- **PUT** - [/users/:id] - Actualizar información usuario **CON TOKEN** --------------|#DONE|
+- **PUT** - [/users] - Actualizar información usuario **CON TOKEN** ------------------|#DONE|
 
 # POSIBLES MEJORAS
 
@@ -40,7 +41,6 @@
 - **DELETE** - [/news/:id/comments/:idComment] - Eliminar un comentario. **CON TOKEN**//SOLO ADMIN
 - **POST** - [/news/:id/comments/photo] - Añadir una foto a un comentario. **CON TOKEN**//SOLO ADMIN
 - **DELETE** - [/news/:id/comments/photos/:idPhoto] - Eliminar una foto de comentario de noticia. **CON TOKEN**//SOLO ADMIN
-
 - **POST** - [/users/recovery] - Recuperar contraseña de usuario.
 - **POST** - [/users/reset] - Insertar nueva contraseña de usuario tras recuperación.
 - **PUT** - [/users/:id/password] - Editar contraseña. **CON TOKEN**//SOLO ADMIN
