@@ -72,7 +72,7 @@ const editNews = async (req, res, next) => {
 
     // Verificar si la noticia existe antes de editarla
     const [existingNews] = await connection.query(
-      'SELECT * FROM news WHERE id = ?',
+      'SELECT userId FROM news WHERE id = ?',
       [newsId]
     );
 
@@ -80,6 +80,16 @@ const editNews = async (req, res, next) => {
       return res.status(404).send({
         status: 'ko',
         error: 'Lamentablemente, la noticia solicitada no existe.',
+      });
+    }
+
+    const existingUserId = existingNews[0].userId;
+
+    // Comprobar si el usuario actual coincide con el userId de la noticia
+    if (existingUserId !== req.userId) {
+      return res.status(403).send({
+        status: 'ko',
+        error: 'No tienes permisos para editar esta noticia.',
       });
     }
 
