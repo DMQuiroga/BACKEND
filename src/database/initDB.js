@@ -53,6 +53,7 @@ async function main() {
         publishDate DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
         deleted BOOLEAN DEFAULT false,
         score INT NOT NULL DEFAULT 0,
+        fakeNew INT NOT NULL DEFAULT 0,
         categoryId INT UNSIGNED NOT NULL,
         introText VARCHAR(512) NOT NULL,
         text TEXT,

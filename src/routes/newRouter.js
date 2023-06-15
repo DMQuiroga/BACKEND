@@ -11,6 +11,7 @@ const {
   getTodayNews,
   voteLike,
   voteDislike,
+  voteFakeNew,
   getBestNews,
   getWorstNews,
   editNews,
@@ -33,5 +34,6 @@ router.post('/news', authUser, createNew);
 router.put('/edit', authUser, editNews);
 router.post('/news/:id/like', authUser, voteLike);
 router.post('/news/:id/dislike', authUser, voteDislike);
+router.post('/news/:id/fake', authUser, voteFakeNew);
 
 module.exports = router;

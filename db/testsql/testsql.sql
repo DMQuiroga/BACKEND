@@ -1,3 +1,4 @@
+USE hb_news;
 INSERT INTO users (name, surname, email, password, imageUrl, biography) 
 VALUES 
 ('Eduardo', 'Castro Bianch', 'eduardo@gmail.com', '123', 'https://i.pinimg.com/170x/b9/9a/30/b99a309f679ff9154edc78d8db0575ea.jpg', 'Soy desarollador web'),
@@ -21,11 +22,15 @@ VALUES
 
 SELECT * FROM category;
 
-INSERT INTO news (userId, imagenUrl, title, publishDate, score, categoryId, introText, text)
+INSERT INTO news (userId, imagenUrl, title, publishDate, score, fakeNew, categoryId, introText, text)
 VALUES
-    (1, 'https://...jpg', 'Título noticia 1 sobre Ciencia y tecnología', NOW(), 20, 4, 'Introducción de la noticia 1', 'Texto completo de la noticia 1'),
-    (2, 'https://...jpg', 'Título noticia 2 sobre Deportes', NOW(), 25, 6, 'Introducción de la noticia 2', 'Texto completo de la noticia 2'),
-    (3, 'https://...jpg', 'Título noticia 3 sobre Psicología', NOW(), 30, 8, 'Introducción de la noticia 3', 'Texto completo de la noticia 3'),
-    (4, 'https://...jpg', 'Título noticia 4 sobre Entretenimiento', NOW(), 35, 7, 'Introducción de la noticia 4', 'Texto completo de la noticia 4');
+    (1, 'https://...jpg', 'Título noticia 1 sobre Ciencia y tecnología', NOW(), 20, 3, 4, 'Introducción de la noticia 1', 'Texto completo de la noticia 1'),
+    (2, 'https://...jpg', 'Título noticia 2 sobre Deportes', NOW(), 25, 8, 6, 'Introducción de la noticia 2', 'Texto completo de la noticia 2'),
+    (3, 'https://...jpg', 'Título noticia 3 sobre Psicología', NOW(), 30, 0, 8, 'Introducción de la noticia 3', 'Texto completo de la noticia 3'),
+    (4, 'https://...jpg', 'Título noticia 4 sobre Entretenimiento', NOW(), 0, 11, 7, 'Introducción de la noticia 4', 'Texto completo de la noticia 4');
 
 SELECT * FROM news;
+
+SELECT * FROM news WHERE userId = 4;
+
+SELECT * FROM category;
