@@ -9,7 +9,7 @@ global.__basedir = __dirname;
 
 // Módulo para la creación de servidor http.
 const express = require('express');
-// MIddleware log de eventos de express.
+// Middleware log de eventos de express.
 const morgan = require('morgan');
 // Módulo para que no existan conflictos en la base de datos cuando se realicen  peticiones en el servidor local
 const cors = require('cors');
