@@ -1,3 +1,6 @@
+'use strict';
+// ACTUALIZAR DATOS DE UN USUARIO
+
 const getDB = require('../../database/db');
 const { createPathIfNotExists } = require('../../helpers/helpers');
 const path = require('path');

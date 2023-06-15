@@ -1,5 +1,5 @@
 'use strict';
-// EXPORT
+// EXPORTS NEWS
 
 const getNewsId = require('./getNewsId.js');
 const { createNews } = require('./createNews.js');

@@ -1,11 +1,12 @@
 'use strict';
-// OBTENER TODAS LAS NOTICIAS ORDENADAS POR FECHA
+// OBTENER TODAS LAS NOTICIAS ORDENADAS POR FECHA Y OBTENER TODAS LAS NOTICIAS ORDENADAS POR SCORE
 
 const getConnection = require('../../database/db');
 
 const getAllNewsOrderByDate = async (req, res, next) => {
   let connection;
 
+  // OBTENER TODAS LAS NOTICIAS ORDENADAS
   try {
     // Establecemos una conexión a la base de datos
     connection = await getConnection();

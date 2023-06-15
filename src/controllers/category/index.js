@@ -1,5 +1,5 @@
 'use strict';
-// EXPORT
+// EXPORTS CATEGORY
 
 const getCategory = require('./getCategory');
 const getAllCategories = require('./getAllCategories');

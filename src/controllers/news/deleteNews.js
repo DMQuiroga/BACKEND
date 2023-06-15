@@ -21,8 +21,6 @@ async function deleteNews(req, res, next) {
       [id, req.userId]
     );
 
-    // console.log(result);
-
     if (result.affectedRows !== 1) {
       return res.status(400).send({
         status: 'ko',

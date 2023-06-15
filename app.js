@@ -1,4 +1,6 @@
 'use strict';
+// LET'S GO!
+
 // Módulo que carga las variables del archivo .env en las variables de entorno
 require('dotenv').config();
 

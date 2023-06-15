@@ -1,5 +1,5 @@
 'use strict';
-// EXPORT
+// EXPORTS USER
 
 const getAllUsers = require('./getAllUsers');
 const getUser = require('./getUser');

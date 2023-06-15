@@ -1,5 +1,5 @@
 'use strict';
-// VOTAR NOTICIA POSITIVAMENTE O NEGATICAMENTE
+// VOTAR NOTICIA POSITIVAMENTE O NEGATICAMENTE Y VOTAR NOTICIA FAKE
 
 const getConnection = require('../../database/db');
 

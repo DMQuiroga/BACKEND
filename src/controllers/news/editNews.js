@@ -76,6 +76,7 @@ const editNews = async (req, res, next) => {
       [newsId]
     );
 
+    // Comprobar si la noticia existe
     if (existingNews.length === 0) {
       return res.status(404).send({
         status: 'ko',
@@ -103,6 +104,7 @@ const editNews = async (req, res, next) => {
       [photoFileName, categoryId, title, introText, text, newsId]
     );
 
+    // Devolvemos una respuesta
     res.status(200).send({
       status: 'ok',
       message: `La noticia con ID ${newsId} ha sido editada exitosamente.`,
