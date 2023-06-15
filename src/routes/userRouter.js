@@ -22,7 +22,7 @@ const router = express.Router();
 router.get('/activate/:registrationcode', activateUser);
 // Crear nuevo usuario con validación de email
 router.post('/user', createUser);
-// Actualizar información usuario
+// Actualizar información usuario validando id usuario
 router.put('/user', authUser, updateUser);
 // Obtener información de usuarios
 router.get('/users/', authUser, getAllUsers);
