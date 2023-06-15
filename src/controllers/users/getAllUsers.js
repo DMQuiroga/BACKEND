@@ -8,7 +8,7 @@ const getAllUsers = async (req, res, next) => {
 
   try {
     const [users] = await connect.query(
-      `SELECT id, name, surname, imageUrl, biography, createdAt FROM users`
+      `SELECT id, name, surname, imagenUrl, biography, createdAt FROM users`
     );
 
     if (users.length) {

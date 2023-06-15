@@ -1,24 +1,10 @@
 const getDB = require('../../database/db');
 
-const { createPathIfNotExists } = require('../../helpers/helpers');
-
-const path = require('path');
-const sharp = require('sharp');
-
 async function updateUser(req, res, next) {
   let connect = null;
 
   try {
-    const {
-      userId,
-      name,
-      createdAt,
-      surname,
-      email,
-      password,
-      biography,
-      lastUpdatedAt,
-    } = req.body;
+    const { userId, name, surname, email, password, biography } = req.body;
 
     connect = await getDB();
 
@@ -29,22 +15,6 @@ async function updateUser(req, res, next) {
         error:
           '(userId) Le recordamos un campo obligatorio proporcionarnos su id de usuario',
       });
-    }
-
-    let photoFileName;
-    // Procesamiento de la imagen de la noticia (si se proporcionó una)
-    if (req.files && req.files.imageUrl) {
-      const uploadsDir = path.join(global.__basedir, '/uploads');
-      // Crear el directorio de subida si no existe
-      await createPathIfNotExists(uploadsDir);
-
-      // console.log(req.files.imageUrl);
-
-      const imagenUrl = sharp(req.files.imageUrl.data);
-      imagenUrl.resize(1000);
-
-      photoFileName = `${Date.now()}_${req.files.imageUrl.name}`;
-      await imagenUrl.toFile(path.join(uploadsDir, photoFileName));
     }
 
     // Verificar si el usuario existe antes de editarlo
@@ -63,20 +33,10 @@ async function updateUser(req, res, next) {
     await connect.query(
       `
       UPDATE users
-      SET imagenUrl = ?, name = ?, surname = ?, email = ?, password = SHA2(?, 512), biography = ?, createdAt = ?, lastUpdatedAt = UTC_TIMESTAMP()
+      SET name = ?, surname = ?, email = ?, password = SHA2(?, 512), biography = ?
       WHERE id = ?
       `,
-      [
-        photoFileName,
-        name,
-        surname,
-        email,
-        password,
-        biography,
-        createdAt,
-        lastUpdatedAt,
-        userId,
-      ]
+      [name, surname, email, password, biography, userId]
     );
 
     return res.status(200).send({
@@ -87,9 +47,6 @@ async function updateUser(req, res, next) {
         updateSurname: surname,
         updateEmail: email,
         updateBiography: biography,
-        createdAt: createdAt,
-        lastUpdatedAt: lastUpdatedAt,
-        photoFileName: photoFileName,
       },
     });
   } catch (error) {

@@ -12,7 +12,7 @@ CREATE TABLE users (
     email VARCHAR(100) UNIQUE NOT NULL,
     password VARCHAR(512) NOT NULL,
     createdAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    imageUrl VARCHAR(512),
+    imagenUrl VARCHAR(512),
     biography VARCHAR(250),
     lastUpdatedAt DATETIME NULL,
     registrationcode BIGINT UNIQUE,

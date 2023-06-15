@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "6cbe7a1b-c782-468b-b8f8-d06e3a0f3002",
+		"_postman_id": "910d4564-d50c-4c47-93b0-c76bfac16f47",
 		"name": "HB news",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"name\": \"David\",\n\"surname\": \"Martínez Quiroga\",\n\"email\": \"davidmartinezq@hotmail.com\",\n\"password\": \"123\"}",
+							"raw": "{\n\"name\": \"David\",\n\"surname\": \"Martínez Quiroga\",\n\"email\": \"davidmartinezq@hotmail.com\",\n\"password\": \"123\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -91,7 +91,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njc4ODQyOSwiZXhwIjoxNjg2ODc0ODI5fQ.c-Uhkz8-mtn1l38xYg7YirT797t56J0yml_cCWy-eV4",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njc5OTQwMCwiZXhwIjoxNjg2ODg1ODAwfQ.CJIiNmwjSjKDe6X0ljIANtvk2jIMOA4zsSTWTEhjCXk",
 								"type": "default"
 							}
 						],
@@ -117,7 +117,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njc4ODQyOSwiZXhwIjoxNjg2ODc0ODI5fQ.c-Uhkz8-mtn1l38xYg7YirT797t56J0yml_cCWy-eV4",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njc5OTQwMCwiZXhwIjoxNjg2ODg1ODAwfQ.CJIiNmwjSjKDe6X0ljIANtvk2jIMOA4zsSTWTEhjCXk",
 								"type": "default"
 							}
 						],
@@ -149,7 +149,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njc4ODQyOSwiZXhwIjoxNjg2ODc0ODI5fQ.c-Uhkz8-mtn1l38xYg7YirT797t56J0yml_cCWy-eV4",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njc5OTQwMCwiZXhwIjoxNjg2ODg1ODAwfQ.CJIiNmwjSjKDe6X0ljIANtvk2jIMOA4zsSTWTEhjCXk",
 								"type": "default"
 							}
 						],
@@ -174,13 +174,13 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njc4ODQyOSwiZXhwIjoxNjg2ODc0ODI5fQ.c-Uhkz8-mtn1l38xYg7YirT797t56J0yml_cCWy-eV4",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njc5OTQwMCwiZXhwIjoxNjg2ODg1ODAwfQ.CJIiNmwjSjKDe6X0ljIANtvk2jIMOA4zsSTWTEhjCXk",
 								"type": "default"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\"name\": \"Pepe\",\n\"surname\": \"Lopez\",\n\"userId\": 5,\n\"email\": \"davidmartinezq@hotmail.com\",\n\"password\": \"123\"\n}",
+							"raw": "{\n        \"name\": \"Davicito\",\n        \"surname\": \"Vizoso\",\n        \"email\": \"davidmartinezq@hotmail.com\",\n        \"password\": \"123\",\n        \"userId\": 5\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -213,7 +213,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njc4ODQyOSwiZXhwIjoxNjg2ODc0ODI5fQ.c-Uhkz8-mtn1l38xYg7YirT797t56J0yml_cCWy-eV4",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njc5OTQwMCwiZXhwIjoxNjg2ODg1ODAwfQ.CJIiNmwjSjKDe6X0ljIANtvk2jIMOA4zsSTWTEhjCXk",
 								"type": "default"
 							}
 						],
@@ -222,7 +222,7 @@
 							"formdata": [
 								{
 									"key": "title",
-									"value": "Hola soy un tittle...",
+									"value": "Hola soy un tittle...!!!!",
 									"type": "default"
 								},
 								{
@@ -243,7 +243,7 @@
 								{
 									"key": "imageUrl",
 									"type": "file",
-									"src": "/home/hacker/Downloads/mmmm.jpg"
+									"src": "/home/hacker/Downloads/prueba.jpg"
 								}
 							],
 							"options": {
@@ -273,7 +273,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njc4ODQyOSwiZXhwIjoxNjg2ODc0ODI5fQ.c-Uhkz8-mtn1l38xYg7YirT797t56J0yml_cCWy-eV4",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njc5OTQwMCwiZXhwIjoxNjg2ODg1ODAwfQ.CJIiNmwjSjKDe6X0ljIANtvk2jIMOA4zsSTWTEhjCXk",
 								"type": "default"
 							}
 						],
@@ -303,7 +303,7 @@
 								{
 									"key": "imageUrl",
 									"type": "file",
-									"src": "/home/hacker/Downloads/prueba.jpg"
+									"src": "/home/hacker/Downloads/images.jpeg"
 								},
 								{
 									"key": "newsId",
@@ -338,7 +338,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njc4ODQyOSwiZXhwIjoxNjg2ODc0ODI5fQ.c-Uhkz8-mtn1l38xYg7YirT797t56J0yml_cCWy-eV4",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njc5OTQwMCwiZXhwIjoxNjg2ODg1ODAwfQ.CJIiNmwjSjKDe6X0ljIANtvk2jIMOA4zsSTWTEhjCXk",
 								"type": "default"
 							}
 						],
