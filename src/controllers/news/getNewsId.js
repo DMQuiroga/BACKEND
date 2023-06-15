@@ -18,7 +18,7 @@ const getNewsId = async (req, res, next) => {
     }
     // Obtener la noticia correspondiente al ID de usuario
     const [news] = await connect.query(
-      `SELECT title, introText, text, imagenUrl, categoryId, score, fakeNew, publishDate  FROM news WHERE userId=?`,
+      `SELECT title, introText, text, imagenUrl, categoryId, score, fakeNews, publishDate  FROM news WHERE userId=?`,
       [id]
     );
     // Comprobar si se encontraron noticias para el usuario
