@@ -28,6 +28,7 @@ async function updateUser(req, res, next) {
       });
     }
 
+    // Comprobar la validez y longitud de los nombre
     if (!name || name.length > 100) {
       return res.status(400).send({
         status: 'ko',
