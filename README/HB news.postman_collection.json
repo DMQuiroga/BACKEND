@@ -122,7 +122,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njg0MjM5NywiZXhwIjoxNjg2OTI4Nzk3fQ.GPNc0ZNrO3RX-nT2_ICMlEJyoHXLURd7GAtxwEcHuUo",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njg2ODQyMCwiZXhwIjoxNjg2OTU0ODIwfQ.a2skkmfhGFzGpyuHGOqCXzDCDzqIXTfKF9MHUW3IX5o",
 								"type": "default"
 							}
 						],
@@ -148,7 +148,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njg0MDAzMCwiZXhwIjoxNjg2OTI2NDMwfQ.DDfWoehIHhthoyEyV_l3QHgrAQ1Iv0S3qTELeQntLWE",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njg2ODQyMCwiZXhwIjoxNjg2OTU0ODIwfQ.a2skkmfhGFzGpyuHGOqCXzDCDzqIXTfKF9MHUW3IX5o",
 								"type": "default"
 							}
 						],
@@ -180,7 +180,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njg0MDAzMCwiZXhwIjoxNjg2OTI2NDMwfQ.DDfWoehIHhthoyEyV_l3QHgrAQ1Iv0S3qTELeQntLWE",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njg2ODQyMCwiZXhwIjoxNjg2OTU0ODIwfQ.a2skkmfhGFzGpyuHGOqCXzDCDzqIXTfKF9MHUW3IX5o",
 								"type": "default"
 							}
 						],
@@ -205,7 +205,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njc5OTQwMCwiZXhwIjoxNjg2ODg1ODAwfQ.CJIiNmwjSjKDe6X0ljIANtvk2jIMOA4zsSTWTEhjCXk",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njg2ODQyMCwiZXhwIjoxNjg2OTU0ODIwfQ.a2skkmfhGFzGpyuHGOqCXzDCDzqIXTfKF9MHUW3IX5o",
 								"type": "default"
 							}
 						],
@@ -280,7 +280,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njg0MDAzMCwiZXhwIjoxNjg2OTI2NDMwfQ.DDfWoehIHhthoyEyV_l3QHgrAQ1Iv0S3qTELeQntLWE",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njg2ODQyMCwiZXhwIjoxNjg2OTU0ODIwfQ.a2skkmfhGFzGpyuHGOqCXzDCDzqIXTfKF9MHUW3IX5o",
 								"type": "default"
 							}
 						],
@@ -340,7 +340,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njg0MDAzMCwiZXhwIjoxNjg2OTI2NDMwfQ.DDfWoehIHhthoyEyV_l3QHgrAQ1Iv0S3qTELeQntLWE",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njg2ODQyMCwiZXhwIjoxNjg2OTU0ODIwfQ.a2skkmfhGFzGpyuHGOqCXzDCDzqIXTfKF9MHUW3IX5o",
 								"type": "default"
 							}
 						],
@@ -370,11 +370,11 @@
 								{
 									"key": "imageUrl",
 									"type": "file",
-									"src": "/home/hacker/Downloads/images.jpeg"
+									"src": "/home/hacker/Downloads/mmmm.jpg"
 								},
 								{
 									"key": "newsId",
-									"value": "5",
+									"value": "60",
 									"type": "text"
 								}
 							],
@@ -405,7 +405,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njg0MDAzMCwiZXhwIjoxNjg2OTI2NDMwfQ.DDfWoehIHhthoyEyV_l3QHgrAQ1Iv0S3qTELeQntLWE",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njg2ODQyMCwiZXhwIjoxNjg2OTU0ODIwfQ.a2skkmfhGFzGpyuHGOqCXzDCDzqIXTfKF9MHUW3IX5o",
 								"type": "default"
 							}
 						],
@@ -431,7 +431,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njg0MDAzMCwiZXhwIjoxNjg2OTI2NDMwfQ.DDfWoehIHhthoyEyV_l3QHgrAQ1Iv0S3qTELeQntLWE",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njg2ODQyMCwiZXhwIjoxNjg2OTU0ODIwfQ.a2skkmfhGFzGpyuHGOqCXzDCDzqIXTfKF9MHUW3IX5o",
 								"type": "default"
 							}
 						],
@@ -456,7 +456,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njg0MDAzMCwiZXhwIjoxNjg2OTI2NDMwfQ.DDfWoehIHhthoyEyV_l3QHgrAQ1Iv0S3qTELeQntLWE",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njg2ODQyMCwiZXhwIjoxNjg2OTU0ODIwfQ.a2skkmfhGFzGpyuHGOqCXzDCDzqIXTfKF9MHUW3IX5o",
 								"type": "default"
 							}
 						],
@@ -481,12 +481,12 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njc4ODQyOSwiZXhwIjoxNjg2ODc0ODI5fQ.c-Uhkz8-mtn1l38xYg7YirT797t56J0yml_cCWy-eV4",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlzQWRtaW4iOjAsImlhdCI6MTY4Njg2ODQyMCwiZXhwIjoxNjg2OTU0ODIwfQ.a2skkmfhGFzGpyuHGOqCXzDCDzqIXTfKF9MHUW3IX5o",
 								"type": "default"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/news/5",
+							"raw": "http://localhost:8080/news/60",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -494,7 +494,7 @@
 							"port": "8080",
 							"path": [
 								"news",
-								"5"
+								"60"
 							]
 						}
 					},
@@ -506,7 +506,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/today-news/8",
+							"raw": "http://localhost:8080/today-news/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -514,7 +514,7 @@
 							"port": "8080",
 							"path": [
 								"today-news",
-								"8"
+								"2"
 							]
 						}
 					},

@@ -1,21 +1,25 @@
 'use strict';
-//REQUERIMOS MODULOS Y DATOS PARA ARRANCAR EL SERVIDOR
+// Módulo que carga las variables del archivo .env en las variables de entorno
 require('dotenv').config();
 
 // Guardamos directorio raiz como variable global
 global.__basedir = __dirname;
 
+// Módulo para la creación de servidor http.
 const express = require('express');
+// MIddleware log de eventos de express.
 const morgan = require('morgan');
+// Módulo para que no existan conflictos en la base de datos cuando se realicen  peticiones en el servidor local
 const cors = require('cors');
+// Middleware para la subida de archivos al servidor.
 const fileUpload = require('express-fileupload');
 
 const app = express();
 app.use(fileUpload());
 const { PORT } = process.env;
 
-app.use(morgan('dev'));
 app.use(cors());
+app.use(morgan('dev'));
 //CONTROLADORES PARA LOS DISTINTOS MÉTODOS Y FUNCIONALIDADES
 
 // Controlador health
