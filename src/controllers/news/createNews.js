@@ -6,7 +6,7 @@ const { createPathIfNotExists } = require('../../helpers/helpers');
 const path = require('path');
 const sharp = require('sharp');
 
-const createNew = async (req, res, next) => {
+const createNews = async (req, res, next) => {
   let connection;
 
   try {
@@ -102,4 +102,4 @@ const createNew = async (req, res, next) => {
   }
 };
 
-module.exports = { createNew };
+module.exports = { createNews };

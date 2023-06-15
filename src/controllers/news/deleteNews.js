@@ -3,7 +3,7 @@
 
 const getConnection = require('../../database/db');
 
-async function deleteNew(req, res, next) {
+async function deleteNews(req, res, next) {
   let connection;
 
   try {
@@ -46,4 +46,4 @@ async function deleteNew(req, res, next) {
   }
 }
 
-module.exports = deleteNew;
+module.exports = deleteNews;

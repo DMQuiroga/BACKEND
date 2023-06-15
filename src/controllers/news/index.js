@@ -2,22 +2,22 @@
 // EXPORT
 
 const getNewsId = require('./getNewsId.js');
-const { createNew } = require('./createNew.js');
-const deleteNew = require('./deleteNew.js');
+const { createNews } = require('./createNews.js');
+const deleteNews = require('./deleteNews.js');
 const {
   getAllNewsOrderByDate,
   getAllNewsOrderByScore,
 } = require('./getAllNewsOrderBy.js');
 const getFakeNews = require('./getFakeNews.js');
 const getTodayNews = require('./getTodayNews.js');
-const { voteLike, voteDislike, voteFakeNews } = require('./voteNew.js');
+const { voteLike, voteDislike, voteFakeNews } = require('./voteNews.js');
 const { getBestNews, getWorstNews } = require('./getBestWorstNews.js');
 const { editNews } = require('./editNews.js');
 
 module.exports = {
   getNewsId,
-  createNew,
-  deleteNew,
+  createNews,
+  deleteNews,
   getAllNewsOrderByDate,
   getFakeNews,
   getTodayNews,

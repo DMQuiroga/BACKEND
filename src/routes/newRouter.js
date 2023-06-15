@@ -5,8 +5,8 @@ const { authUser } = require('../middlewares/auth');
 
 const {
   getNewsId,
-  deleteNew,
-  createNew,
+  deleteNews,
+  createNews,
   getAllNewsOrderByDate,
   getTodayNews,
   voteLike,
@@ -40,9 +40,9 @@ router.get('/worst', getWorstNews);
 // Obtener las fake noticias ordenadas por puntuación de fake news
 router.get('/fake', getFakeNews);
 // Eliminar noticia validando id usuario
-router.delete('/news/:id', authUser, deleteNew);
+router.delete('/news/:id', authUser, deleteNews);
 // Crear nueva noticia
-router.post('/news', authUser, createNew);
+router.post('/news', authUser, createNews);
 // Editar una noticia validando id usuario
 router.put('/edit', authUser, editNews);
 // Votar una noticia positivamente
