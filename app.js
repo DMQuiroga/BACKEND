@@ -7,6 +7,7 @@ global.__basedir = __dirname;
 
 const express = require('express');
 const morgan = require('morgan');
+const cors = require('cors');
 const fileUpload = require('express-fileupload');
 
 const app = express();
@@ -14,7 +15,7 @@ app.use(fileUpload());
 const { PORT } = process.env;
 
 app.use(morgan('dev'));
-
+app.use(cors());
 //CONTROLADORES PARA LOS DISTINTOS MÉTODOS Y FUNCIONALIDADES
 
 // Controlador health
