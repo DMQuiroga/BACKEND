@@ -100,7 +100,7 @@ const voteFakeNew = async (req, res, next) => {
 
     const [result] = await connection.query(
       `
-          SELECT score FROM news WHERE id = ?
+          SELECT fakeNew FROM news WHERE id = ?
       `,
       [id]
     );
@@ -112,20 +112,20 @@ const voteFakeNew = async (req, res, next) => {
       });
     }
 
-    let nuevoScore = result[0].score + 1;
+    let nuevoFakeNew = result[0].fakeNew + 1;
     await connection.query(
       `
-        UPDATE news SET score = ? WHERE id = ?;
+        UPDATE news SET fakeNew = ? WHERE id = ?;
         `,
-      [nuevoScore, id]
+      [nuevoFakeNew, id]
     );
 
     res.status(200).send({
       status: 'ok',
       message:
         '¿Fake news? ¡Pfff! Voto a noticia aplicado, puntuación actual ' +
-        nuevoScore,
-      data: result[0].score + 1,
+        nuevoFakeNew,
+      data: result[0].fakeNew + 1,
     });
   } catch (error) {
     next(error);
