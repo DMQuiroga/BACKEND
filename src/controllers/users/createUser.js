@@ -8,7 +8,7 @@ async function createUser(req, res, next) {
   let connect = null;
 
   try {
-    const { name, surname, email, password } = req.body;
+    const { name, surname, email, password, biography } = req.body;
 
     let expr = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/;
     if (!expr.test(email))
@@ -39,8 +39,8 @@ async function createUser(req, res, next) {
     const registrationcode = Math.floor(Math.random() * 1000000000000000000);
 
     await connect.query(
-      `INSERT INTO users (name, surname, email, password, registrationcode) VALUES (?,?,?,SHA2(?,512),?)`,
-      [name, surname, email, password, registrationcode]
+      `INSERT INTO users (name, surname, email, password, biography, registrationcode) VALUES (?,?,?,SHA2(?,512),?,?)`,
+      [name, surname, email, password, biography, registrationcode]
     );
 
     const validationLink = `http://${process.env.API_HOST}:${process.env.PORT}/activate/${registrationcode}`;
@@ -86,6 +86,8 @@ async function createUser(req, res, next) {
       data: {
         name: name,
         surname: surname,
+        email: email,
+        biography: biography,
       },
     });
   } catch (error) {
