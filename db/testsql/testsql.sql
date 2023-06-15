@@ -22,7 +22,7 @@ VALUES
 
 
 
-INSERT INTO news (userId, imagenUrl, title, publishDate, score, fakeNew, categoryId, introText, text)
+INSERT INTO news (userId, imagenUrl, title, publishDate, score, fakeNews, categoryId, introText, text)
 VALUES
     (1, 'https://...jpg', 'Descubrimientos revolucionarios!!!', NOW(), 20, 0, 4, 'Descubrimientos revolucionarios en la Ciencia y Tecnología', 'El descubrimiento se basa en años de investigación intensiva y colaboración entre científicos de todo el mundo. Mediante el uso de tecnologías de vanguardia, los investigadores han logrado desarrollar un nuevo material con propiedades nunca antes vistas. Este material tiene el potencial de revolucionar diversas industrias, desde la medicina hasta la energía renovable. Además, sus características únicas podrían permitir avances significativos en áreas como la electrónica, la informática cuántica y la nanotecnología. Los expertos predicen que este descubrimiento marcará un hito en la historia de la ciencia y abrirá nuevas puertas hacia un futuro lleno de posibilidades innovadoras.'),
     (1, 'https://...jpg', 'Descubren nuevo planeta habitable en sistema solar cercano', NOW(), 20, 53, 4, 'Científicos han hecho un emocionante hallazgo!!', 'En un descubrimiento sin precedentes, astrónomos han identificado un nuevo planeta en un sistema solar cercano que presenta condiciones propicias para la existencia de vida. El exoplaneta, llamado Kepler-452b, se encuentra en la "zona habitable" alrededor de su estrella, lo que sugiere la posibilidad de que albergue agua líquida y sea adecuado para la vida tal como la conocemos. Este hallazgo plantea nuevas interrogantes sobre la existencia de otros mundos habitables y el potencial de encontrar formas de vida extraterrestre.'),

@@ -11,7 +11,7 @@ const {
   getTodayNews,
   voteLike,
   voteDislike,
-  voteFakeNew,
+  voteFakeNews,
   getFakeNews,
   getBestNews,
   getWorstNews,
@@ -50,6 +50,6 @@ router.post('/news/:id/like', authUser, voteLike);
 // Votar una noticia negativamente
 router.post('/news/:id/dislike', authUser, voteDislike);
 // Votar una noticia fake
-router.post('/news/:id/fake', authUser, voteFakeNew);
+router.post('/news/:id/fake', authUser, voteFakeNews);
 
 module.exports = router;
