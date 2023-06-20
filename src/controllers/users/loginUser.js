@@ -15,7 +15,7 @@ const loginUser = async (req, res) => {
     //comprobar que exista el usuario
     const [user] = await connect.query(
       `
-            SELECT id, isAdmin, email, active
+            SELECT id, name, surname, email, active
             FROM users
             WHERE email = ? AND password = SHA2(?, 512)
             `,
@@ -36,26 +36,25 @@ const loginUser = async (req, res) => {
       });
     }
 
-    //jsonwebtoken
     const info = {
       id: user[0].id,
+      name: user[0].name,
+      surname: user[0].surname,
       email: user[0].email,
-      isAdmin: user[0].isAdmin,
     };
 
+    //jsonwebtoken
     //generar el token con el método "sign" el cuál recibe como argumentos un objeto con la info
     //una palabra secreta (nuestra/servidor) (.env SECRET_TOKEN) y el tiempo de vencimiento del token
     //palabra secreta la usa para poder desencriptar la información, codigo una clave o un hash
     const token = jwt.sign(info, process.env.SECRET, { expiresIn: '1d' });
+    info.token = token;
 
     //se lo envío al usuario
     res.status(200).send({
       status: 'ok',
       message: 'Login',
-      data: {
-        token: token,
-        user: info,
-      },
+      data: info,
     });
   } catch (error) {
     console.log(error);
