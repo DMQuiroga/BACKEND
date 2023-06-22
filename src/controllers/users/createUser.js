@@ -30,6 +30,13 @@ async function createUser(req, res, next) {
       });
     }
 
+    if (password.length < 6) {
+      return res.status(400).send({
+        status: 'ko',
+        error: 'La contraseña debe tener al menos 6 caracteres',
+      });
+    }
+
     let photoFileName;
     // Procesamiento de la imagen de la noticia (si se proporcionó una)
     if (req.files && req.files.imageUrl) {
