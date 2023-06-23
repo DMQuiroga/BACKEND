@@ -10,6 +10,7 @@
 - **GET** - [/news-score] - Obtener las noticias ORDER BY SCORE ----------------------|#DONE|
 - **GET** - [/today-news] - Listar noticias del día ordenadas por valoración ---------|#DONE|
 - **GET** - [/today-news/:categoryId] - Noticias del día por tema ORDER BY score -----|#DONE|
+- **GET** - [/category-news/:categoryId] - Noticias por categoria ORDER BY fecha -----|#DONE|
 - **GET** - [/category/:id] - Obtener la categoria por id_categoria ------------------|#DONE|
 - **GET** - [/category] - Obtener todas las categorias -------------------------------|#DONE|
 - **GET** - [/best] - Obtener las 3 mejores noticias ---------------------------------|#DONE|

@@ -1,5 +1,5 @@
 'use strict';
-// OBTENER NOTICIA POR ID
+// OBTENER NOTICIA POR ID USUARIO
 
 const getConnection = require('../../database/db');
 
