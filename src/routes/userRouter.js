@@ -10,6 +10,7 @@ const {
   loginUser,
   getAllUsers,
   logoutUser,
+  getMe,
 } = require('../controllers/users');
 
 const { authUser } = require('../middlewares/auth');
@@ -24,8 +25,10 @@ router.get('/activate/:registrationcode', activateUser);
 router.post('/user', createUser);
 // Actualizar información usuario validando id usuario
 router.put('/user', authUser, updateUser);
+// Obtener al usuario específico presente en nuestra web
+router.get('/user', authUser, getMe);
 // Obtener información de usuarios
-router.get('/users/', authUser, getAllUsers);
+router.get('/users', authUser, getAllUsers);
 // Obtener información de usuario
 router.get('/user/:id', authUser, getUser);
 // Iniciar de sesión

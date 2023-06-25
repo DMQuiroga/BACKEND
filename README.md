@@ -20,6 +20,7 @@
 ## Registrados
 
 - _Mismos endpoints anteriores_
+- **GET** - [/user] - Información de usuario(Me) **CON TOKEN** -----------------------|#DONE|
 - **GET** - [/users] - Información de usuarios. **CON TOKEN** ------------------------|#DONE|
 - **GET** - [/user/:id] - Información de usuario. **CON TOKEN** ----------------------|#DONE|
 - **GET** - [/news] - Listar noticias ordenadas por fecha **CON TOKEN** --------------|#DONE|

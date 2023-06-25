@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "b81e0b4e-0701-4e15-9370-fa0125d17bb9",
+		"_postman_id": "a7cedf05-8dc2-405d-9c95-e289ad36c358",
 		"name": "HB news",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -44,7 +44,7 @@
 								{
 									"key": "imageUrl",
 									"type": "file",
-									"src": "/home/hacker/Downloads/prueba.jpg"
+									"src": "/home/hacker/Downloads/images (1).jpeg"
 								}
 							],
 							"options": {
@@ -148,7 +148,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzUyODEyOSwiZXhwIjoxNjg3NjE0NTI5fQ.bdb5t5MXJtv3-QLmnU5EPIO5RBi2AzKTQBc4mqTL4MI",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzcwNTk5NywiZXhwIjoxNjg3NzkyMzk3fQ.Bo4Iq9k9axwZfowKa3cz83gVmSpd9zJlDHqeHTvhETk",
 								"type": "default"
 							}
 						],
@@ -180,7 +180,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzUyODEyOSwiZXhwIjoxNjg3NjE0NTI5fQ.bdb5t5MXJtv3-QLmnU5EPIO5RBi2AzKTQBc4mqTL4MI",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzcwNTk5NywiZXhwIjoxNjg3NzkyMzk3fQ.Bo4Iq9k9axwZfowKa3cz83gVmSpd9zJlDHqeHTvhETk",
 								"type": "default"
 							}
 						],
@@ -205,7 +205,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzUyODEyOSwiZXhwIjoxNjg3NjE0NTI5fQ.bdb5t5MXJtv3-QLmnU5EPIO5RBi2AzKTQBc4mqTL4MI",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzcwNTk5NywiZXhwIjoxNjg3NzkyMzk3fQ.Bo4Iq9k9axwZfowKa3cz83gVmSpd9zJlDHqeHTvhETk",
 								"type": "default"
 							}
 						],
@@ -245,7 +245,7 @@
 								{
 									"key": "imageUrl",
 									"type": "file",
-									"src": "/home/hacker/Downloads/images.jpeg"
+									"src": "/home/hacker/Downloads/mmmm.jpg"
 								}
 							],
 							"options": {
@@ -254,6 +254,31 @@
 								}
 							}
 						},
+						"url": {
+							"raw": "http://localhost:8080/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Me",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzcwNTk5NywiZXhwIjoxNjg3NzkyMzk3fQ.Bo4Iq9k9axwZfowKa3cz83gVmSpd9zJlDHqeHTvhETk",
+								"type": "default"
+							}
+						],
 						"url": {
 							"raw": "http://localhost:8080/user",
 							"protocol": "http",
@@ -280,7 +305,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzUyODEyOSwiZXhwIjoxNjg3NjE0NTI5fQ.bdb5t5MXJtv3-QLmnU5EPIO5RBi2AzKTQBc4mqTL4MI",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzcwNTk5NywiZXhwIjoxNjg3NzkyMzk3fQ.Bo4Iq9k9axwZfowKa3cz83gVmSpd9zJlDHqeHTvhETk",
 								"type": "default"
 							}
 						],
@@ -310,7 +335,7 @@
 								{
 									"key": "imageUrl",
 									"type": "file",
-									"src": "/home/hacker/Downloads/mmmm.jpg"
+									"src": "/home/hacker/Downloads/images (1).jpeg"
 								}
 							],
 							"options": {
@@ -340,7 +365,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzUyODEyOSwiZXhwIjoxNjg3NjE0NTI5fQ.bdb5t5MXJtv3-QLmnU5EPIO5RBi2AzKTQBc4mqTL4MI",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzcwNTk5NywiZXhwIjoxNjg3NzkyMzk3fQ.Bo4Iq9k9axwZfowKa3cz83gVmSpd9zJlDHqeHTvhETk",
 								"type": "default"
 							}
 						],
@@ -370,7 +395,7 @@
 								{
 									"key": "imageUrl",
 									"type": "file",
-									"src": "/home/hacker/Downloads/images (1).jpeg"
+									"src": "/home/hacker/Downloads/mmmm.jpg"
 								},
 								{
 									"key": "newsId",
@@ -405,7 +430,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzUyODEyOSwiZXhwIjoxNjg3NjE0NTI5fQ.bdb5t5MXJtv3-QLmnU5EPIO5RBi2AzKTQBc4mqTL4MI",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzcwNTk5NywiZXhwIjoxNjg3NzkyMzk3fQ.Bo4Iq9k9axwZfowKa3cz83gVmSpd9zJlDHqeHTvhETk",
 								"type": "default"
 							}
 						],
@@ -431,7 +456,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzUyODEyOSwiZXhwIjoxNjg3NjE0NTI5fQ.bdb5t5MXJtv3-QLmnU5EPIO5RBi2AzKTQBc4mqTL4MI",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzcwNTk5NywiZXhwIjoxNjg3NzkyMzk3fQ.Bo4Iq9k9axwZfowKa3cz83gVmSpd9zJlDHqeHTvhETk",
 								"type": "default"
 							}
 						],
@@ -456,7 +481,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzUyODEyOSwiZXhwIjoxNjg3NjE0NTI5fQ.bdb5t5MXJtv3-QLmnU5EPIO5RBi2AzKTQBc4mqTL4MI",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzcwNTk5NywiZXhwIjoxNjg3NzkyMzk3fQ.Bo4Iq9k9axwZfowKa3cz83gVmSpd9zJlDHqeHTvhETk",
 								"type": "default"
 							}
 						],
@@ -481,7 +506,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzUyODEyOSwiZXhwIjoxNjg3NjE0NTI5fQ.bdb5t5MXJtv3-QLmnU5EPIO5RBi2AzKTQBc4mqTL4MI",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzcwNTk5NywiZXhwIjoxNjg3NzkyMzk3fQ.Bo4Iq9k9axwZfowKa3cz83gVmSpd9zJlDHqeHTvhETk",
 								"type": "default"
 							}
 						],
@@ -546,7 +571,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzUyODEyOSwiZXhwIjoxNjg3NjE0NTI5fQ.bdb5t5MXJtv3-QLmnU5EPIO5RBi2AzKTQBc4mqTL4MI",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzcwNTk5NywiZXhwIjoxNjg3NzkyMzk3fQ.Bo4Iq9k9axwZfowKa3cz83gVmSpd9zJlDHqeHTvhETk",
 								"type": "default"
 							}
 						],
@@ -573,7 +598,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzUyODEyOSwiZXhwIjoxNjg3NjE0NTI5fQ.bdb5t5MXJtv3-QLmnU5EPIO5RBi2AzKTQBc4mqTL4MI",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzcwNTk5NywiZXhwIjoxNjg3NzkyMzk3fQ.Bo4Iq9k9axwZfowKa3cz83gVmSpd9zJlDHqeHTvhETk",
 								"type": "default"
 							}
 						],
@@ -638,7 +663,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzUyODEyOSwiZXhwIjoxNjg3NjE0NTI5fQ.bdb5t5MXJtv3-QLmnU5EPIO5RBi2AzKTQBc4mqTL4MI",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzcwNTk5NywiZXhwIjoxNjg3NzkyMzk3fQ.Bo4Iq9k9axwZfowKa3cz83gVmSpd9zJlDHqeHTvhETk",
 								"type": "default"
 							}
 						],
@@ -722,7 +747,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Get News Order By Date With Id Category",
 					"request": {
 						"method": "GET",
 						"header": [],

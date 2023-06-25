@@ -8,6 +8,7 @@ const updateUser = require('./updateUser');
 const activateUser = require('./activateUser');
 const loginUser = require('./loginUser');
 const logoutUser = require('./logoutUser');
+const getMe = require('./getMe');
 
 module.exports = {
   getUser,
@@ -17,4 +18,5 @@ module.exports = {
   getAllUsers,
   logoutUser,
   updateUser,
+  getMe,
 };
