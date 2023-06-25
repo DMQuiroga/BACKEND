@@ -1,5 +1,5 @@
 'use strict';
-// OBTENER EL USUARIO ACTUALMENTE AUTENTICADO
+// OBTENER INFORMACIÓN USUARIO ESPECÍFICO PRESENTE EN NUESTRA WEB
 
 const getConnection = require('../../database/db');
 

@@ -1,5 +1,5 @@
 'use strict';
-// LOGOUT
+// LOGOUT USUARIO
 
 const jwt = require('jsonwebtoken');
 

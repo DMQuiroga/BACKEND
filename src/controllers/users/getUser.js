@@ -1,5 +1,5 @@
 'use strict';
-// OBTENER USUARIO POR ID
+// OBTENER INFORMACIÓN USUARIO POR ID
 
 const getConnection = require('../../database/db');
 

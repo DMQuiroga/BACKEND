@@ -1,5 +1,5 @@
 'use strict';
-// OBTENER TODOS LOS USUARIOS
+// OBTENER INFORMACIÓN DE TODOS LOS USUARIOS
 
 const getConnection = require('../../database/db');
 
