@@ -1,5 +1,5 @@
 'use strict';
-// ACTUALIZAR DATOS DE UN USUARIO
+// ACTUALIZAR INFORMACIÓN DE UN USUARIO
 
 const getDB = require('../../database/db');
 const { createPathIfNotExists } = require('../../helpers/helpers');
