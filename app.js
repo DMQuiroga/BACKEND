@@ -22,6 +22,7 @@ const { PORT } = process.env;
 
 app.use(cors());
 app.use(morgan('dev'));
+app.use('/uploads', express.static('./uploads'));
 //CONTROLADORES PARA LOS DISTINTOS MÉTODOS Y FUNCIONALIDADES
 
 // Controlador health
