@@ -12,7 +12,7 @@ const getAllNewsOrderByDate = async (req, res, next) => {
     connection = await getConnection();
     // Obtenemos todas las noticias de la base de datos
     const [result] = await connection.query(`
-        SELECT title, introText, text, imagenUrl, categoryId, score,  fakeNews, publishDate FROM news ORDER BY publishDate DESC
+        SELECT id, title, introText, text, imagenUrl, categoryId, score,  fakeNews, publishDate FROM news ORDER BY publishDate DESC
       `);
 
     // Verificamos si se encontraron noticias
@@ -47,7 +47,7 @@ const getAllNewsOrderByScore = async (req, res, next) => {
     connection = await getConnection();
     // Obtenemos todas las noticias de la base de datos
     const [result] = await connection.query(`
-        SELECT title, introText, text, imagenUrl, categoryId, score, fakeNews, publishDate FROM news ORDER BY score DESC
+        SELECT id, title, introText, text, imagenUrl, categoryId, score, fakeNews, publishDate FROM news ORDER BY score DESC
       `);
 
     // Verificamos si se encontraron noticias
