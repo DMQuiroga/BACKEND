@@ -15,7 +15,7 @@ const getNewsByCategory = async (req, res, next) => {
     if (categoryId) {
       [result] = await connection.query(
         `
-        SELECT id, title, introText, text, imagenUrl, categoryId, score, fakeNews, publishDate FROM news WHERE categoryId = ? ORDER BY publishDate DESC
+        SELECT id, userId, title, introText, text, imagenUrl, categoryId, score, fakeNews, publishDate FROM news WHERE categoryId = ? ORDER BY publishDate DESC
       `,
         [categoryId]
       );

@@ -16,13 +16,13 @@ const getTodayNews = async (req, res, next) => {
     if (categoryId) {
       [result] = await connection.query(
         `
-        SELECT id, title, introText, text, imagenUrl, categoryId, score, fakeNews, publishDate FROM news WHERE publishDate >= CURDATE() AND categoryId = ? ORDER BY score DESC
+        SELECT id,userId, title, introText, text, imagenUrl, categoryId, score, fakeNews, publishDate FROM news WHERE publishDate >= CURDATE() AND categoryId = ? ORDER BY score DESC
       `,
         [categoryId]
       );
     } else {
       [result] = await connection.query(`
-        SELECT id, title, introText, text, imagenUrl, categoryId, score, fakeNews, publishDate FROM news WHERE publishDate >= CURDATE() ORDER BY score DESC
+        SELECT id, userId, title, introText, text, imagenUrl, categoryId, score, fakeNews, publishDate FROM news WHERE publishDate >= CURDATE() ORDER BY score DESC
       `);
     }
 

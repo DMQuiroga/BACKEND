@@ -11,7 +11,6 @@ const voteLike = async (req, res, next) => {
     connection = await getConnection();
 
     const { id } = req.params;
-
     const [result] = await connection.query(
       `
           SELECT score FROM news WHERE id = ?
