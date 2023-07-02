@@ -15,11 +15,16 @@ const getNewsByCategory = async (req, res, next) => {
     if (categoryId) {
       [result] = await connection.query(
         `
-        SELECT id, userId, title, introText, text, imagenUrl, categoryId, score, fakeNews, publishDate FROM news WHERE categoryId = ? ORDER BY publishDate DESC
+        SELECT n.id, n.userId, n.title, n.introText, n.text, n.imagenUrl, n.categoryId, n.score, n.fakeNews, n.publishDate, u.id as userId, u.name, u.surname, u.email, u.createdAt, u.imagenUrl as userImageUrl, u.biography, u.lastUpdatedAt
+        FROM news AS n
+        INNER JOIN users AS u ON n.userId = u.id
+        WHERE n.categoryId = ?
+        ORDER BY n.publishDate DESC
       `,
         [categoryId]
       );
     }
+
     if (result.length > 0) {
       res.status(200).send({
         status: 'ok',
