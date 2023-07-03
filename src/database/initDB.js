@@ -61,6 +61,17 @@ async function main() {
         FOREIGN KEY (categoryId) REFERENCES category(id)
     );
     `);
+    // Creando tabla userVotes
+    await connection.query(`
+    CREATE TABLE userVotes (
+      newId INT UNSIGNED NOT NULL,
+      userId INT UNSIGNED NOT NULL,
+      vote INT NOT NULL,
+  
+      FOREIGN KEY(newId) REFERENCES news(id) ON DELETE CASCADE,
+      FOREIGN KEY(userId) REFERENCES users(id)
+  );
+    `);
   } catch (error) {
     console.Console.error(error);
   } finally {
