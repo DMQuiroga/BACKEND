@@ -25,7 +25,31 @@ const voteLike = async (req, res, next) => {
       });
     }
 
+    const [votes] = await connection.query(
+      `
+        SELECT * FROM userVotes WHERE newId = ? AND userId = ?
+      `,
+      [id, req.userId]
+    );
+
+    if (votes.length > 0) {
+      return res.status(403).send({
+        status: 'ko',
+        error: 'Ya se ha votado la noticia',
+      });
+    }
+
     let nuevoScore = result[0].score + 1;
+    await connection.query(
+      `
+      INSERT INTO userVotes (
+        newId,
+        userId,
+        vote      )
+      VALUES (?,?,?)
+        `,
+      [id, req.userId, 1]
+    );
     await connection.query(
       `
         UPDATE news SET score = ? WHERE id = ?;
@@ -68,7 +92,32 @@ const voteDislike = async (req, res, next) => {
       });
     }
 
+    const [votes] = await connection.query(
+      `
+        SELECT * FROM userVotes WHERE newId = ? AND userId = ?
+      `,
+      [id, req.userId]
+    );
+
+    console.log(votes);
+    if (votes.length > 0) {
+      return res.status(403).send({
+        status: 'ko',
+        error: 'Ya se ha votado la noticia',
+      });
+    }
+
     let nuevoScore = result[0].score - 1;
+    await connection.query(
+      `
+      INSERT INTO userVotes (
+        newId,
+        userId,
+        vote      )
+      VALUES (?,?,?)
+        `,
+      [id, req.userId, -1]
+    );
     await connection.query(
       `
           UPDATE news SET score = ? WHERE id = ?;
