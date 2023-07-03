@@ -1,6 +1,7 @@
 CREATE DATABASE IF NOT EXISTS hb_news;
 USE hb_news;
 
+DROP TABLE IF EXISTS userVotes;
 DROP TABLE IF EXISTS news;
 DROP TABLE IF EXISTS category;
 DROP TABLE IF EXISTS users;
@@ -41,3 +42,11 @@ CREATE TABLE news (
     FOREIGN KEY (categoryId) REFERENCES category(id)
 );
 
+CREATE TABLE userVotes (
+    newId INT UNSIGNED NOT NULL,
+    userId INT UNSIGNED NOT NULL,
+    vote INT NOT NULL,
+
+    FOREIGN KEY(newId) REFERENCES news(id),
+    FOREIGN KEY(userId) REFERENCES users(id)
+);
