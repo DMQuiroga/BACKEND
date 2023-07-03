@@ -15,7 +15,7 @@ const loginUser = async (req, res) => {
     //comprobar que exista el usuario
     const [user] = await connect.query(
       `
-            SELECT id, name, surname, email, active
+            SELECT id, name, surname, email, active, biography, imagenUrl
             FROM users
             WHERE email = ? AND password = SHA2(?, 512)
             `,
@@ -41,6 +41,8 @@ const loginUser = async (req, res) => {
       name: user[0].name,
       surname: user[0].surname,
       email: user[0].email,
+      biography: user[0].biography,
+      imagenUrl: user[0].imagenUrl,
     };
 
     //jsonwebtoken
