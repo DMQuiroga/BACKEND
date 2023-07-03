@@ -47,6 +47,6 @@ CREATE TABLE userVotes (
     userId INT UNSIGNED NOT NULL,
     vote INT NOT NULL,
 
-    FOREIGN KEY(newId) REFERENCES news(id),
+    FOREIGN KEY(newId) REFERENCES news(id) ON DELETE CASCADE,
     FOREIGN KEY(userId) REFERENCES users(id)
 );
