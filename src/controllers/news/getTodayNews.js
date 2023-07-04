@@ -16,13 +16,21 @@ const getTodayNews = async (req, res, next) => {
     if (categoryId) {
       [result] = await connection.query(
         `
-        SELECT title, introText, text, imagenUrl, categoryId, score, fakeNews, publishDate FROM news WHERE publishDate >= CURDATE() AND categoryId = ? ORDER BY score DESC
+        SELECT n.id, n.userId, n.title, n.introText, n.text, n.imagenUrl, n.categoryId, n.score, n.fakeNews, n.publishDate, u.id as userId, u.name, u.surname, u.email, u.createdAt, u.imagenUrl as userImageUrl, u.biography, u.lastUpdatedAt
+        FROM news AS n
+        INNER JOIN users AS u ON n.userId = u.id
+        WHERE n.publishDate >= CURDATE() AND n.categoryId = ?
+        ORDER BY n.score DESC
       `,
         [categoryId]
       );
     } else {
       [result] = await connection.query(`
-        SELECT title, introText, text, imagenUrl, categoryId, score, fakeNews, publishDate FROM news WHERE publishDate >= CURDATE() ORDER BY score DESC
+        SELECT n.id, n.userId, n.title, n.introText, n.text, n.imagenUrl, n.categoryId, n.score, n.fakeNews, n.publishDate, u.id as userId, u.name, u.surname, u.email, u.createdAt, u.imagenUrl as userImageUrl, u.biography, u.lastUpdatedAt
+        FROM news AS n
+        INNER JOIN users AS u ON n.userId = u.id
+        WHERE n.publishDate >= CURDATE()
+        ORDER BY n.score DESC
       `);
     }
 

@@ -12,7 +12,7 @@ const getBestNews = async (req, res) => {
     connection = await getConnection();
 
     const [result] = await connection.query(`
-      SELECT title, introText, text, imagenUrl, categoryId, score, fakeNews, publishDate FROM news ORDER BY score DESC LIMIT 3
+      SELECT id, title, introText, text, imagenUrl, categoryId, score, fakeNews, publishDate FROM news ORDER BY score DESC LIMIT 3
     `);
 
     if (!result.length) {
@@ -47,7 +47,7 @@ const getWorstNews = async (req, res) => {
     connection = await getConnection();
 
     const [result] = await connection.query(`
-      SELECT title, introText, text, imagenUrl, categoryId, score,  fakeNews, publishDate FROM news ORDER BY score ASC LIMIT 3
+      SELECT id, title, introText, text, imagenUrl, categoryId, score,  fakeNews, publishDate FROM news ORDER BY score ASC LIMIT 3
     `);
 
     if (!result.length) {

@@ -61,7 +61,7 @@ async function updateUser(req, res, next) {
     let photoFileName;
     // Procesamiento de la imagen de perfil (si se proporcionó una)
     if (req.files && req.files.imageUrl) {
-      const uploadsDir = path.join(global.__basedir, '/uploads');
+      const uploadsDir = path.join(__dirname, `..`, `..`, `uploads`);
       // Crear el directorio de subida si no existe
       await createPathIfNotExists(uploadsDir);
 
