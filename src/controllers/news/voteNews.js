@@ -145,6 +145,15 @@ const voteFakeNews = async (req, res, next) => {
     connection = await getConnection();
 
     const { id } = req.params;
+    const { amount } = req.body;
+
+    // Validar que la cantidad sea válida
+    if (amount !== 1 && amount !== 100) {
+      return res.status(400).send({
+        status: 'ko',
+        error: 'La cantidad especificada no es válida',
+      });
+    }
 
     const [result] = await connection.query(
       `
@@ -160,20 +169,19 @@ const voteFakeNews = async (req, res, next) => {
       });
     }
 
-    let nuevoScoreFakeNews = result[0].fakeNews + 1;
+    let nuevoScoreFakeNews = result[0].fakeNews + amount;
+
     await connection.query(
       `
         UPDATE news SET fakeNews = ? WHERE id = ?;
-        `,
+      `,
       [nuevoScoreFakeNews, id]
     );
 
     res.status(200).send({
       status: 'ok',
-      message:
-        '¿Fake news? ¡Pfff! Voto a noticia aplicado, puntuación actual ' +
-        nuevoScoreFakeNews,
-      data: result[0].fakeNews + 1,
+      message: `¿Fake news? ¡Pfff! Voto a noticia aplicado (${amount}), puntuación actual ${nuevoScoreFakeNews}`,
+      data: nuevoScoreFakeNews,
     });
   } catch (error) {
     next(error);
