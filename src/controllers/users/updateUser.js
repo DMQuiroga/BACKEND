@@ -59,17 +59,19 @@ async function updateUser(req, res, next) {
     }
 
     let photoFileName;
-    // Procesamiento de la imagen de perfil (si se proporcionó una)
-    if (req.files && req.files.imageUrl) {
-      const uploadsDir = path.join(__dirname, `..`, `..`, `uploads`);
+    // Procesamiento de la imagen de la noticia (si se proporcionó una)
+    if (req.files && Object.keys(req.files).length === 1) {
       // Crear el directorio de subida si no existe
-      await createPathIfNotExists(uploadsDir);
+      const dirUpload = path.join(__dirname, `..`, `..`, `uploads`);
+      console.log(__dirname);
+      console.log(req.files);
+      await createPathIfNotExists(dirUpload);
 
-      const imageUrl = sharp(req.files.imageUrl.data);
+      const imageUrl = sharp(req.files.ImagenUrl.data);
       imageUrl.resize(1000);
 
-      photoFileName = `${Date.now()}_${req.files.imageUrl.name}`;
-      await imageUrl.toFile(path.join(uploadsDir, photoFileName));
+      photoFileName = `${Date.now()}_${req.files.ImagenUrl.name}`;
+      await imageUrl.toFile(path.join(dirUpload, photoFileName));
     }
 
     // Verificar si el usuario existe antes de editarlo

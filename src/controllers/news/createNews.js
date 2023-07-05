@@ -46,7 +46,6 @@ const createNews = async (req, res, next) => {
     let photoFileName;
     // Procesamiento de la imagen de la noticia (si se proporcionó una)
     if (req.files && Object.keys(req.files).length === 1) {
-      // const uploadsDir = path.join(global.__basedir, '/uploads');
       // Crear el directorio de subida si no existe
       const dirUpload = path.join(__dirname, `..`, `..`, `uploads`);
       console.log(__dirname);

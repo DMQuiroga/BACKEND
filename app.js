@@ -1,12 +1,8 @@
 'use strict';
-
 // LET'S GO!
 
 // Módulo que carga las variables del archivo .env en las variables de entorno
 require('dotenv').config();
-
-// Guardamos directorio raiz como variable global
-// global.__basedir = __dirname;
 
 // Módulo para la creación de servidor http.
 const express = require('express');
@@ -16,7 +12,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 // Middleware para la subida de archivos al servidor.
 const fileUpload = require('express-fileupload');
-const path = require(`path`);
+const path = require('path');
 
 const app = express();
 app.use(fileUpload());
@@ -26,9 +22,9 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use('/uploads', express.static('./uploads'));
 //CONTROLADORES PARA LOS DISTINTOS MÉTODOS Y FUNCIONALIDADES
+
 const staticDir = path.join(__dirname, './src/uploads');
 app.use(express.static(staticDir));
-
 // Controlador health
 const healthRouter = require('./src/routes/healthRouter');
 // Controladores de usuario
