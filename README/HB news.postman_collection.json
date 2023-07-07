@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "a7cedf05-8dc2-405d-9c95-e289ad36c358",
+		"_postman_id": "c13c59c6-aae0-4a91-a550-d2bec90ce3ba",
 		"name": "HB news",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -305,7 +305,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzcwNTk5NywiZXhwIjoxNjg3NzkyMzk3fQ.Bo4Iq9k9axwZfowKa3cz83gVmSpd9zJlDHqeHTvhETk",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImJpb2dyYXBoeSI6IlNveSBkZXNhcnJvbGxhciIsImltYWdlblVybCI6bnVsbCwiaWF0IjoxNjg4NzM5NjM1LCJleHAiOjE2ODg4MjYwMzV9.YpeerPplcWwc0EEKRZSHNoerR8XSLNAIhj5JAltUYR0",
 								"type": "default"
 							}
 						],
@@ -333,9 +333,9 @@
 									"type": "default"
 								},
 								{
-									"key": "imageUrl",
+									"key": "ImagenUrl",
 									"type": "file",
-									"src": "/home/hacker/Downloads/images (1).jpeg"
+									"src": "/home/hacker/Downloads/43a0a91cab81.jpg_490566899.jpg"
 								}
 							],
 							"options": {
@@ -365,7 +365,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImlhdCI6MTY4NzcwNTk5NywiZXhwIjoxNjg3NzkyMzk3fQ.Bo4Iq9k9axwZfowKa3cz83gVmSpd9zJlDHqeHTvhETk",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRhdmlkIiwic3VybmFtZSI6Ik1hcnTDrW5leiBRdWlyb2dhIiwiZW1haWwiOiJkYXZpZG1hcnRpbmV6cUBob3RtYWlsLmNvbSIsImJpb2dyYXBoeSI6IlNveSBkZXNhcnJvbGxhciIsImltYWdlblVybCI6bnVsbCwiaWF0IjoxNjg4NzM5NjM1LCJleHAiOjE2ODg4MjYwMzV9.YpeerPplcWwc0EEKRZSHNoerR8XSLNAIhj5JAltUYR0",
 								"type": "default"
 							}
 						],
@@ -393,13 +393,13 @@
 									"type": "default"
 								},
 								{
-									"key": "imageUrl",
+									"key": "ImagenUrl",
 									"type": "file",
 									"src": "/home/hacker/Downloads/mmmm.jpg"
 								},
 								{
 									"key": "newsId",
-									"value": "60",
+									"value": "138",
 									"type": "text"
 								}
 							],
