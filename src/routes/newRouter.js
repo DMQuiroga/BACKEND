@@ -15,6 +15,7 @@ const {
   getFakeNews,
   getBestNews,
   getWorstNews,
+  editNewsId,
   editNews,
   getAllNewsOrderByScore,
 } = require('../controllers/news');
@@ -45,6 +46,8 @@ router.delete('/news/:id', authUser, deleteNews);
 router.post('/news', authUser, createNews);
 // Editar una noticia validando id usuario
 router.put('/edit', authUser, editNews);
+// Editar una noticia por id noticia validando id usuario
+router.put('/edit/:newsId', authUser, editNewsId);
 // Votar una noticia positivamente
 router.post('/news/:id/like', authUser, voteLike);
 // Votar una noticia negativamente

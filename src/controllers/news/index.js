@@ -13,6 +13,7 @@ const getTodayNews = require('./getTodayNews.js');
 const { voteLike, voteDislike, voteFakeNews } = require('./voteNews.js');
 const { getBestNews, getWorstNews } = require('./getBestWorstNews.js');
 const { editNews } = require('./editNews.js');
+const { editNewsId } = require('./editNewsId.js');
 
 module.exports = {
   getNewsId,
@@ -28,4 +29,5 @@ module.exports = {
   editNews,
   getAllNewsOrderByScore,
   voteFakeNews,
+  editNewsId,
 };
