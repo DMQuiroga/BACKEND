@@ -10,26 +10,9 @@ async function updateUser(req, res, next) {
   let connection = null;
 
   try {
-    const { userId, name, surname, email, password, biography } = req.body;
+    const { name, surname, email, biography } = req.body;
 
     connection = await getDB();
-
-    // Comprobar si se proporcionó id de usuario
-    if (!userId) {
-      return res.status(400).send({
-        status: 'ko',
-        error:
-          '(userId) Le recordamos que es obligatorio proporcionar su id de usuario.',
-      });
-    }
-
-    // Comprobar si el usuario actual coincide con el userId que desea modificar
-    if (req.userId !== parseInt(userId)) {
-      return res.status(403).send({
-        status: 'ko',
-        error: 'No tienes permisos para modificar estos datos de perfil.',
-      });
-    }
 
     // Comprobar la validez y longitud de los nombre
     if (!name || name.length > 100) {
@@ -59,23 +42,25 @@ async function updateUser(req, res, next) {
     }
 
     let photoFileName;
-    // Procesamiento de la imagen de perfil (si se proporcionó una)
-    if (req.files && req.files.imageUrl) {
-      const uploadsDir = path.join(global.__basedir, '/uploads');
+    // Procesamiento de la imagen de la noticia (si se proporcionó una)
+    if (req.files && Object.keys(req.files).length === 1) {
       // Crear el directorio de subida si no existe
-      await createPathIfNotExists(uploadsDir);
+      const dirUpload = path.join(__dirname, `..`, `..`, `uploads`);
+      console.log(__dirname);
+      console.log(req.files);
+      await createPathIfNotExists(dirUpload);
 
-      const imageUrl = sharp(req.files.imageUrl.data);
+      const imageUrl = sharp(req.files.ImagenUrl.data);
       imageUrl.resize(1000);
 
-      photoFileName = `${Date.now()}_${req.files.imageUrl.name}`;
-      await imageUrl.toFile(path.join(uploadsDir, photoFileName));
+      photoFileName = `${Date.now()}_${req.files.ImagenUrl.name}`;
+      await imageUrl.toFile(path.join(dirUpload, photoFileName));
     }
 
     // Verificar si el usuario existe antes de editarlo
     const [existingUser] = await connection.query(
       `SELECT id FROM users WHERE id = ?`,
-      [userId]
+      [req.userId]
     );
     if (existingUser.length === 0) {
       return res.status(404).send({
@@ -90,7 +75,7 @@ async function updateUser(req, res, next) {
     await connection.query(
       `
       UPDATE users
-      SET imagenUrl = ?, name = ?, surname = ?, email = ?, password = SHA2(?, 512), biography = ?, lastUpdatedAt = ?
+      SET imagenUrl = ?, name = ?, surname = ?, email = ?,  biography = ?, lastUpdatedAt = ?
       WHERE id = ?
       `,
       [
@@ -98,10 +83,9 @@ async function updateUser(req, res, next) {
         name,
         surname,
         email,
-        password,
         biography,
         lastUpdatedAt,
-        userId,
+        req.userId,
       ]
     );
 
