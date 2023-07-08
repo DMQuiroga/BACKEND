@@ -1,6 +1,6 @@
 CREATE DATABASE IF NOT EXISTS hb_news;
 USE hb_news;
-SET time_zone = '+00:00';
+SET time_zone = '+02:00';
 
 DROP TABLE IF EXISTS userVotes;
 DROP TABLE IF EXISTS news;
