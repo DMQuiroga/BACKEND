@@ -13,6 +13,9 @@ async function main() {
   try {
     connection = await getConnection();
 
+    console.log('Estableciendo la zona horaria');
+    await connection.query("SET time_zone = '+02:00'");
+
     console.log('Borrando tablas existentes');
     await connection.query('DROP TABLE IF EXISTS news');
     await connection.query('DROP TABLE IF EXISTS category');

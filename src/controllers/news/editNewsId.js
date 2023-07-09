@@ -1,5 +1,5 @@
 'use strict';
-// EDITAR NOTICIA
+// EDITAR NOTICIA POR ID DE NOTICIA
 
 const getConnection = require('../../database/db');
 const { createPathIfNotExists } = require('../../helpers/helpers');
