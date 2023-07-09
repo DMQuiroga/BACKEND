@@ -1,6 +1,3 @@
-'use strict';
-// OBTENER NOTICIA POR ID USUARIO
-
 const getConnection = require('../../database/db');
 
 const getNewsId = async (req, res, next) => {
@@ -18,7 +15,13 @@ const getNewsId = async (req, res, next) => {
     }
     // Obtener la noticia correspondiente al ID de usuario
     const [news] = await connect.query(
-      `SELECT title, introText, text, imagenUrl, categoryId, score, fakeNews, publishDate  FROM news WHERE userId=?`,
+      `
+      SELECT n.id, n.userId, n.title, n.introText, n.text, n.imagenUrl, n.categoryId, n.score, n.fakeNews, n.publishDate, u.id as userId, u.name, u.surname, u.email, u.createdAt, u.imagenUrl as userImageUrl, u.biography, u.lastUpdatedAt
+      FROM news AS n
+      INNER JOIN users AS u ON n.userId = u.id
+      WHERE n.publishDate >= CURDATE() AND n.userId=?
+      ORDER BY n.score DESC
+    `,
       [id]
     );
     // Comprobar si se encontraron noticias para el usuario

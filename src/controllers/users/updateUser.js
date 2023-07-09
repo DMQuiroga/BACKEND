@@ -41,7 +41,7 @@ async function updateUser(req, res, next) {
       });
     }
 
-    let photoFileName;
+    let photoFileName = null; // Establecer el valor inicial como null
     // Procesamiento de la imagen de la noticia (si se proporcionó una)
     if (req.files && Object.keys(req.files).length === 1) {
       // Crear el directorio de subida si no existe
@@ -57,16 +57,18 @@ async function updateUser(req, res, next) {
       await imageUrl.toFile(path.join(dirUpload, photoFileName));
     }
 
-    // Verificar si el usuario existe antes de editarlo
-    const [existingUser] = await connection.query(
-      `SELECT id FROM users WHERE id = ?`,
-      [req.userId]
-    );
-    if (existingUser.length === 0) {
-      return res.status(404).send({
-        status: 'ko',
-        error: 'El usuario solicitado no existe.',
-      });
+    // Verificar si la imagen debe ser actualizada
+    if (photoFileName === null) {
+      // Obtener la imagen actual del usuario
+      const [existingUser] = await connection.query(
+        `SELECT imagenUrl FROM users WHERE id = ?`,
+        [req.userId]
+      );
+
+      // Si se encontró el usuario y tiene una imagen actual, asignarla a photoFileName
+      if (existingUser.length > 0 && existingUser[0].imagenUrl) {
+        photoFileName = existingUser[0].imagenUrl;
+      }
     }
 
     // Actualizar los datos del usuario en la base de datos
@@ -74,11 +76,12 @@ async function updateUser(req, res, next) {
 
     await connection.query(
       `
-      UPDATE users
-      SET imagenUrl = ?, name = ?, surname = ?, email = ?,  biography = ?, lastUpdatedAt = ?
-      WHERE id = ?
-      `,
+  UPDATE users
+  SET imagenUrl = IF(? IS NOT NULL, ?, imagenUrl), name = ?, surname = ?, email = ?,  biography = ?, lastUpdatedAt = ?
+  WHERE id = ?
+  `,
       [
+        photoFileName,
         photoFileName,
         name,
         surname,
